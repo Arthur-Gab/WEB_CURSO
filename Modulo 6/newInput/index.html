@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novos Inputs</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- [if lt IE 9] -->
+    <!-- <script src="js/html5shiv.js"></script> -->
+    <!-- [end if] -->
+
+</head>
+
+<body>
+
+    <form action="" autocomplete="on">
+
+        <!-- First Name -->
+        <label for="fname">First name: </label>
+        <input type="text" name="fname" id="fname" required autofocus>
+        <br><br>
+
+        <!-- Last Name -->
+        <label for="lname">Last name: </label>
+        <input type="text" name="lname" id="lname" required>
+        <br><br>
+
+        <!-- Email -->
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" required autocomplete="off">
+        <br><br>
+
+        <!-- Number -->
+        <label for="number">Number: </label>
+        <input type="number" name="number" id="number" min="0" max="10" step="2" value="0"/>
+        <br><br>
+
+        <!-- Url -->
+        <label for="url">Url: </label>
+        <input type="url" name="url" id="url" placeholder=" ex: http://www..." size="30"/>
+        <br><br>
+
+        <!-- Search -->
+        <label for="search">Search: </label>
+        <input type="search" name="search" id="search"/>
+        <br><br>
+
+        <!-- Range -->
+        <label for="range">Range: </label>
+        <input type="range" name="range" id="range" min="1" max="5" value="3"/>
+        <br><br>
+
+        <!-- Date -->
+        <label for="date">Date: </label>
+        <input type="date" name="date" id="date" autocomplete="bday-day" autocomplete="bday-month"
+            autocomplete="bday-year"/>
+        <br><br>
+
+        <!-- Color -->
+        <label for="color">Color: </label>
+        <input type="color" name="color" id="color"/>
+        <br><br>
+
+        <!-- List -->
+        <label for="browser">Chose a Browser from list:</label>
+        <input list="browsers" id="browser" name="browser" autocomplete="off"/>
+        <datalist id="browsers">
+            <option value="Chrome">
+            <option value="Firefox">
+            <option value="Edge">
+            <option value="Opera GX">
+        </datalist>
+        <br><br>
+
+        <!-- Submit -->
+        <input type="submit" value="Send">
+
+    </form>
+
+</body>
+
+</html>
