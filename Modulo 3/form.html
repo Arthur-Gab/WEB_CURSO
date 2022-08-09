@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>Login</h2>
+    <form action="">
+        
+        Login:
+        <input type="text" name="user">
+        Senha:
+        <input type="password" name="password" >
+
+        <!-- btn enviar -->
+        <input type="submit" value="Enviar" style="margin-top: 5px">
+    
+    </form>
+
+    <h2>Cadastra-se</h2>
+    <form action="">
+        Login:
+        <input type="text" name="user">
+        
+        Sexo:
+        <input type="radio" name="sexo" value="M" style="display: inline-block;"> Masculino 
+        <input type="radio" name="sexo" value="F" style="display: inline-block;"> Feminino 
+        <br><br>
+    
+        Interesses:
+        <input type="checkbox" name="interesses" value="Futebol" style="display: inline-block;"> Futebol
+        <input type="checkbox" name="interesses" value="Cursos" style="display: inline-block;"> Cursos
+        <input type="checkbox" name="interesses" value="Moda" style="display: inline-block;"> Moda
+        <br><br>
+
+        Estados: 
+        <select name="estados" id="">
+            <option value="none"></option>
+            <option value="MG">Minas Gerais</option>
+            <option value="SP">São Paulo</option>
+            <option value="RJ">Rio de Janeiro</option>
+        </select>
+        <br><br>
+
+        Observações:
+        <br>    
+        <textarea name="observacoes" id="" cols="30" rows="10"></textarea>
+        
+        <!-- btn cadastros -->
+        <input type="submit" value="Cadastrar" style="margin-top: 5px">
+    </form>
+
+</body>
+</html>

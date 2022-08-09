@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 1em;
+    font-family: "Roboto Slab", Helvetica, sans-serif;
+    background-color: #eee;
+}
+
+header {
+    background-color: #f7b600;
+    text-align: center;
+    padding: 2em 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo {
+    margin-bottom: 1em;
+    z-index: 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+h1 span {
+    color: #fff;
+}
+
+.navbar {
+    z-index: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 1.01em;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0.2em;
+    padding: 0.5em 1.5em;
+}
+
+.navbar a:hover {
+    background-color: #fff;
+    color: #f7b600;
+}
+
+.navbar a:active {
+    background-color: #fff;
+    color: #000;
+}
+
+main {
+    margin: 0 auto;
+    width: 90vw;
+    min-height: 80vh;
+}
+
+.area-principal {
+    width: 64vw;
+    float: left;
+    background-color: #fff;
+    padding: 2vw;
+}
+
+.area-lateral {
+    background-color: #fff;
+    border: 0.1vh solid black;
+    width: 24vw;
+    float: right;
+    margin-left: 2vw;
+}
+
+.postagem {
+    padding: 1vw;
+}
+
+.img-postagem {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 55vw;
+    height: 41vh;
+    margin: 1vh auto;
+}
+
+#postagem-1{
+    background-image: url(../img/imagem1.jpg);
+}
+
+.data-postagem {
+    font-style: italic;
+    font-size: 0.8em;
+}
+.txt-postagem {
+    margin: 1vh 0;
+    font-size: 0.95em;
+    font-weight: 300;
+}
+
+.area-principal a {
+    text-decoration: none;
+    color: #000;
+    background-color: #f7b600;
+}
+
+.clear{
+    clear: both;
+}
+
+footer {
+    background-color: #f7b600;
+    text-align: center;
+    padding: 3vh;
+}

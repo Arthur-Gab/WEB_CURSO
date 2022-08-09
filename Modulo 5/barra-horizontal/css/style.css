@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+h2 {
+    margin: 1vh 0;
+}
+
+ul {
+    list-style: none;
+    width: 876px; 
+    font-size: 1.2em;
+    background: #159cb0 url(/img/fundo-horizontal.png) repeat-x;
+    float: left;
+}
+
+ul li {
+    float: left;
+}
+
+ul a {
+    display: block;
+    padding: 0.5em 2em;
+    text-decoration: none;
+    color: #fff;
+    background: url(/img/divisor.png) repeat-y;
+}
+
+ul .primeiro a{
+    background: none;
+}
+
+ul a:hover {
+    color: #085662;
+    background-color: #44cade;
+}
+
+
+

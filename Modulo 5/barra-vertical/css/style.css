@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #eee;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+    padding: .3vw;
+}
+header>h2 {
+    margin: 1vh 0;
+}
+
+header>ul {
+    list-style-type: none;
+}
+
+ul a{
+    width: 200px;
+    height: 40px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    line-height: 40px;
+    text-indent: 40px;
+    background: url(../img/menu.png) #f7b600 no-repeat left;
+}
+
+ul a:hover {
+    background: url(../img/menu.png) #f99200 no-repeat right;
+    color: #fff;
+}

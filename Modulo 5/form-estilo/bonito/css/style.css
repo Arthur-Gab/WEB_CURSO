@@ -1,0 +1,55 @@
+body {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background: linear-gradient(to bottom, rgb(86, 7, 97), rgba(134, 2, 79, 0.63)) no-repeat;
+    background-size: cover;
+    /*600x???*/
+}
+
+#conteiner {
+    background: rgba(255, 255, 255, 0.3);
+    width: 60vw;
+    height: 40vh;
+    margin: 30vh auto;
+    -moz-border-radius: 3vw;
+    -webkit-border-radius: 3vw;
+    border-radius: 30px;
+    text-align: center
+}
+
+#conteiner img{
+    width: 20vw;
+    margin-top: -8vh;
+    margin-bottom: 3vh;
+}
+
+#conteiner input{
+    display: block;
+    margin: 1.3em auto;
+    width: 30vw;
+    height: 3.5vh;
+    border: none;
+    font-size: 18px;
+    background-repeat: no-repeat;
+    background-position: 1vw;
+}
+
+input.email {
+    background: #fff url(/img/icone-usuario.png);
+    padding-left: 2.5em;
+}
+
+input.senha {
+    background: #fff url(/img/icone-cadeado.png);
+    padding-left: 2.5em;
+}
+
+input.submit {
+    color: #fff;
+    background-color: #f79300;
+    border: 2px solid #b96a01; 
+
+    background: -webkit-linear-gradient(to bottom, #ecb259, #f79300) no-repeat;
+    background: -moz-linear-gradient(to bottom, #ecb259, #f79300) no-repeat;
+    background: linear-gradient(to bottom, #ecb259, #f79300) no-repeat;
+    
+}

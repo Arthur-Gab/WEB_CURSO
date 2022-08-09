@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+#box {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+#box:hover {
+    width: 300px;
+    background-color: yellow;
+    transition: width 2.5s, background-color 3s;
+}
