@@ -69,14 +69,50 @@ span.txt {
     padding: 0 1vw;
 }
 
-.footer {
+
+/* Footer
+----------------------------------------------- */
+footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     text-align: center;
 }
 
-.footer>span {
-    color: rgba(255, 255, 255, 0.8);
-    letter-spacing: 2px;
+#top-footer {
+    width: 607px;
+    height: 1px;
+    background: #f9f8fa;
+    margin: 0 auto;
+}
+
+section#footer-txt {
+    text-align: center;
+    margin: 2vh;
+}
+
+section#footer-txt span{
+    font-size: 1.2em;
+}
+
+section#social-midia {
+    display: flex;
+    justify-content: center;
+}
+
+.midias {
+    margin: 0 10px;
+    padding: 0 20px;
+}
+
+.midias a{
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.midias a>h3 {
+    padding-left: 15px;
 }
