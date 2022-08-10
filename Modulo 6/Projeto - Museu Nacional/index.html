@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museu Nacional</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/html5shiv.js"></script>
+</head>
+
+<body>
+
+    <div id="content">
+        <!-- start content -->
+
+        <header>
+            <!-- start header -->
+            <div id="logo">
+                <h1><a href="index.html">MUSEU NACIONAL</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Exposição</a></li>
+                    <li><a href="#">Pesquisa</a></li>
+                    <li><a href="#">Acervo</a></li>
+                    <li><a href="#">Vídeos</a></li>
+                    <li><a href="#">Fotos</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </header> <!-- start header -->
+
+        <div id="container">
+            <!-- start container -->
+
+            <div class="principal-container">
+                <!-- start principal container-->
+
+                <section id="frontEntranceImg-top-section"></section>
+
+                <section id="posts"> <!-- start posts -->
+                    
+                    <article class="post">
+
+                        <h3>Vídeo: Conheça o Museu</h3>
+
+                        <iframe width="320" height="200" src="https://www.youtube.com/embed/RGUYb-hivrc"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+
+                    </article>
+
+                    <article class="post">
+
+                        <h3>Mapa: Encontre o Museu</h3>
+
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.2064455939308!2d-43.22871758448328!3d-22.90575504359409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997e58a085b7af%3A0x4d11e9a933d38ce3!2sMuseu%20Nacional%20-%20UFRJ!5e0!3m2!1spt-BR!2sbr!4v1660094093067!5m2!1spt-BR!2sbr"
+                            width="320" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+
+                    </article>
+
+                    <article class="post">
+                        <h3>Exposições</h3>
+
+                        <ul>
+                            <li><a href="#">Os assustadores insetos</a></li>
+                            <li><a href="#">O crânio de Luzia, a mulher mais antigo do Brasil</a></li>
+                            <li><a href="#">Preguiça gigante e Tigre-dentes-de-saber</a></li>
+                            <li><a href="#">Plantas do Brasil Central</a></li>
+                            <li><a href="#">Teressa Cristina: A Imperatriz Arqueóloga</a></li>
+                            <li><a href="#">Arte com Dinossauros - Paleoarte</a></li>
+                        </ul>
+                    </article>
+
+                    <article class="post">
+                        <h3>200 Anos de História</h3>
+
+                        <p class="historia">Numa pota que avançava sobre o mar, posteriormente conhecida como Ponta do
+                            Calabouço, entre as prais de Piçaba e Santa Luzia, no centro histórico do Rio de Janeiro, os
+                            portugueses construiram em 1603 a Fortaleza de Santiago, oriem do conjunto arquitetônico que
+                            hoje abriga o Museu histórico Nacional.
+                        </p>
+
+                        <a href="#">Leia mais</a>
+                    </article>
+
+                </section> <!-- end post -->
+
+            </div> <!-- end principal container -->
+
+            <aside>
+                <!-- start aside -->
+
+                <section id="depoimentoImg-top-aside"></section>
+
+                <section id="visit">
+                    <!-- start visit -->
+                    <h4>Faça uma Visita</h4>
+
+                    <form action="" type="get">
+                        <fieldset>
+
+                            <label for="date">Data: </label>
+                            <input type="date" name="date" id="date" required>
+
+                            <label for="qtdPeople">Qtd Pessoas: </label>
+                            <input type="number" name="qtdPeople" id="qtdPeople" min="1" max="10" required>
+
+                        </fieldset>
+
+                        <input type="submit" value="Verificar Disponibilidade">
+
+                    </form>
+                </section> <!-- end visit -->
+
+                <section id="gallery">
+                    <!-- start gallery -->
+
+                    <h4>Galeria de Fotos</h4>
+
+                    <div id="container-gallery">
+                        <div class="frame">
+                            <div id="photo1" class="gallery-photo"></div>
+                        </div>
+                        <div class="frame">
+                            <div id="photo2" class="gallery-photo"></div>
+                        </div>
+                        <div class="frame">
+                            <div id="photo3" class="gallery-photo"></div>
+                        </div>
+                        <div class="frame">
+                            <div id="photo4" class="gallery-photo"></div>
+                        </div>
+                    </div>
+
+                </section> <!-- end gallery -->
+
+            </aside> <!-- end aside -->
+
+        </div> <!-- end principal -->
+
+    </div> <!-- end container -->
+
+</body>
+
+</html>

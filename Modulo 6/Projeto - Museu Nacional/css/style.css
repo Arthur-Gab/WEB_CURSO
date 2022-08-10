@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*Estrututra do Site
+--------------------------------------------- */
+body {
+    background: #ebe7dd url(../img/fundo.png) repeat-x;
+    font: 12px "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+}
+
+#content {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+/* Logo 
+---------------------------------------------- */
+#logo a{
+    width: 248px;
+    height: 21px;
+    display: block;
+    background-image: url(../img/logo.png);
+    text-indent: -9999px;
+}
+
+/* Nav
+----------------------------------------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1vh 0;
+}
+
+header>nav>ul {
+    display: flex;
+    list-style: none;
+}
+
+header>nav>ul>li {
+    margin: 0 25px;
+}
+
+header>nav>ul>li>a {
+    color: #af670a;
+    text-decoration: none;
+    text-transform: uppercase; 
+    font-size: 1.1em;  
+}
+
+header>nav>ul>li>a:hover {
+    color: #227115;
+    border-bottom: 1px solid rgb(255, 255, 255, .4);
+}
+
+/* Container
+----------------------------------------------- */
+#container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Principal
+----------------------------------------------- */
+.principal-container {
+    width: 710px;
+}
+
+#posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+article.post {
+    width: 50%;
+    padding: 12px;
+}
+
+.post h3 {
+    margin-bottom: 1.2vh;
+    color: #227115;
+    font-size: 1.3em;
+}
+
+.post ul {
+    margin-left: 30px;
+}
+
+.post a {
+    color: #af670a;
+    text-decoration: none;
+    font-size: 1.05em;  
+}
+
+.post a:hover {
+    color: #227115;
+    cursor: pointer;
+}
+
+.post p.historia {
+    text-align: left;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* Aside
+----------------------------------------------- */
+aside {
+    width: 350px;
+    background-color: #ebe7dd;
+}
+
+#frontEntranceImg-top-section {
+    width: 710px;
+    height: 320px;
+    background-image: url(../img/museu.png);
+}
+
+#depoimentoImg-top-aside{
+    width: 350px;
+    height: 320px;
+    background-image: url(../img/depoimento.png);
+}
+
+#visit {
+    background-color: #cdc8b1;
+    padding: 10px 20px 27px 20px;
+    margin-top: 1.5vh;
+}
+
+#visit h4 {
+    color: #86521a;
+    text-transform: uppercase;
+    margin-bottom: 0.4vh;
+}
+
+/* Formulários
+----------------------------------------------- */
+fieldset {
+    border: 0;
+}
+
+input {
+    height: 20px;
+    border: none;
+    border: 1px solid #ada484;
+}
+
+input[type="submit"] {
+    width: 100%;
+    border: none;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #9b9271;
+    height: 40px;
+    padding: 0 10px;
+    margin-top: .5vh;
+    letter-spacing: 1px;
+}
+
+/* Gallery
+----------------------------------------------- */
+
+#gallery {
+    padding: 15px;
+}
+
+#gallery h4 {
+    color: #86521a;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+#container-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.frame {
+    margin: 10px 0;
+    width: 126px;
+    height: 133px;
+    background-image: url(../img/fundo-foto.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-photo {
+    width: 93px;
+    height: 93px;
+}
+
+#photo1 {background-image: url(../img/imagem1.jpg);}
+
+#photo2 {background-image: url(../img/imagem2.jpg);}
+#photo3 {background-image: url(../img/imagem3.jpg);}
+#photo4 {background-image: url(../img/imagem4.jpg);}

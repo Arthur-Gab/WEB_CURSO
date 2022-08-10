@@ -1,0 +1,83 @@
+h1 {
+    margin-left: 1vw;
+}
+
+#conteudo {
+    margin: 2vw;
+    background-color: #eee;
+
+    /*direction, wrap, justify-content*/
+    height: 400px;
+    width: auto;
+
+    display: flex;
+
+    /* row (default), row-reverse, column, column-reverse */
+    flex-direction: row;
+
+    /* nowrap (default), wrap, wrap-reverse */
+    flex-wrap: nowrap;
+
+    /*flex-start (default), flex-end, center, space-between, space-around*/
+    /*Eixo X*/
+    justify-content: space-around;
+
+    /*stretch (default), center, flex-start, flex-end, baseline*/
+    /*Eixo Y*/
+    align-items: center;
+}
+
+.flex-item {
+    background-color: #fff;
+    border: 1px solid gray;
+    margin: .8vw;
+
+    /* align-items (stretch = width & height: auto;)*/
+    width: 200px;
+    height: 100px;
+}
+
+.flex-item-grow1 {
+    /* 0 (default) Define a proporção em que expande */
+    flex-grow: 1;
+}
+
+.flex-item-grow2 {
+    /* 0 (default) Define a proporção em que expande */
+    flex-grow: 2;
+}
+
+.flex-item-shrink1 {
+    /*Contrario do grow*/
+    flex-shrink: 6;
+}
+
+.flex-item-shrink2 {
+    flex-shrink: 3;
+}
+
+.flex-item-basis {
+    /* auto (default)*/
+    /* Tamanho inicial do flex-item antes da distribuição do espaço restante */
+    flex-basis: auto;
+}
+
+
+/*
+.item-order1 {
+    Pode ser + ou - 
+    order: 1;
+}
+
+.item-order2 {
+    order: 2;
+}
+
+.item-order3 {
+    order: 3;
+}
+
+.item-order4 {
+    order: -2;
+}
+*/
