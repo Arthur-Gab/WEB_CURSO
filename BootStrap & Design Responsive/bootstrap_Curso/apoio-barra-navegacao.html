@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+
+  <title>Bootstrap - botões</title>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+  <!-- Navegação
+    Tipos de navegação:
+        nav-pills
+        nav-tabs
+    opções de alinhamento: 
+        justify-content-center 
+        justify-content-end
+        flex-column
+    -->
+  <h2>Navegação simples / abas</h2>
+
+  <ul class="nav nav-pills justify-content-around">
+    <li class="nav-item"><a class="nav-link " href="#">Home</a></li>
+    <li class="nav-item"><a class="nav-link " href="#">Sobre</a></li>
+    <li class="nav-item"><a class="nav-link active" href="#">Contato</a></li>
+  </ul>
+
+  <h2>Barra de navegação simples</h2>
+
+  <!-- container nav -->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">Logo</a>
+
+    <!-- nav -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+    </ul>
+  </nav>
+
+  <h2>Barra de navegação com menu responsivo</h2>
+
+  <!-- start nav -->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Logo -->
+    <a href="#" class="navbar-brand">Logo</a>
+
+    <!-- Menu Hamburguer -->
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#ul-responsive">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- start div -->
+    <div class="collapse navbar-collapse" id="ul-responsive">
+
+      <!-- start ul -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+      </ul> <!-- end ul -->
+
+    </div> <!-- end div -->
+
+  </nav><!-- end nav -->
+
+  <h2>Barra de navegação com formulário</h2>
+
+  <!-- start nav -->
+  <nav class="navbar navbar-expand-sm bg-light navbar-light">
+    <!-- Logo -->
+    <a href="#" class="navbar-brand">Logo</a>
+
+    <!-- Menu Hamburguer -->
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#ul-responsive2">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- start div -->
+    <div class="collapse navbar-collapse" id="ul-responsive2">
+
+      <!-- start ul -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+      </ul> <!-- end ul -->
+
+      <!-- Formulário -->
+      <form action="" class="form-inline">
+        <input type="text" class="form-control" placeholder="Pesquisar...">
+        <button class="btn btn-outline-danger">OK</button>
+      </form>
+
+    </div> <!-- end div -->
+
+  </nav><!-- end nav -->
+
+
+  <h2>Barra de navegação com menu dropdown</h2>
+
+
+  <!-- start nav -->
+  <nav class="navbar navbar-expand-sm bg-light navbar-light">
+    <!-- Logo -->
+    <a href="#" class="navbar-brand">Logo</a>
+
+    <!-- Menu Hamburguer -->
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#ul-responsive3">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- start div -->
+    <div class="collapse navbar-collapse" id="ul-responsive3">
+
+      <!-- start ul -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+
+        <!-- dropdown -->
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Contato</a>
+
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">Serviço 1</a>
+            <a href="#" class="dropdown-item">Serviço 2</a>
+            <a href="#" class="dropdown-item">Serviço 3</a>
+          </div>
+        </li>
+
+      </ul> <!-- end ul -->
+
+
+    </div> <!-- end div -->
+
+  </nav><!-- end nav -->
+
+
+
+
+
+  <!--Cores
+    opções: bg-primary, bg-secondary, bg-success, bg-info,
+    bg-warning, bg-danger, bg-light, bg-dark
+    -->
+  <h2>Cores</h2>
+
+
+  <!--Alinhamentos
+    opções: fixed-top, fixed-bottom, sticky
+    -->
+  <h2>Alinhamentos</h2>
+
+
+  <h1>Lorem ipsum dolor sit amet</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et libero id erat tristique fermentum placerat a
+    erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed ac lobortis quam.
+    Nunc vestibulum tincidunt arcu, at scelerisque velit ornare et. Vestibulum ut malesuada nibh.</p>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
