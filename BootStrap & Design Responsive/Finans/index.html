@@ -21,55 +21,258 @@
 <body>
 
 
-
     <!-- start header -->
     <header class="bg-warning">
 
-        <!-- start navbar -->
-        <nav class="navbar navbar-expand-md">
+        <!-- start container -->
+        <div class="container">
+            <!-- start navbar -->
+            <nav class="navbar navbar-expand-sm navbar-light">
 
-            <!-- logo -->
-            <h1 class="navbar-brand"><a href="#">Finans</a></h1>
+                <!-- logo -->
+                <a href="#" class="navbar-brand">
+                    <img src="/img/logo.png" alt="" style="width: 142px;">
+                </a>
 
-            <!-- button collapse -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+                <!-- button collapse -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-navbar"
+                    aria-controls="header-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars fa-lg"></i>
+                </button>
 
-            <!-- div collapse with nav-itens -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <!-- div collapse with nav-itens -->
+                <div class="collapse navbar-collapse justify-content-end" id="header-navbar">
 
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Recursos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Benefícios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Preço</a>
-                    </li>
-                    <li class="nav-item">
-                        <button class="btn btn-outline-light">Entrar</button>
-                    </li>
-                </ul>
+                    <ul class="navbar-nav align-self-center">
+                        <li class="nav-item pl-md-2">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item pl-md-2">
+                            <a class="nav-link" href="#">Recursos</a>
+                        </li>
+                        <li class="nav-item pl-md-2">
+                            <a class="nav-link" href="#">Benefícios</a>
+                        </li>
+                        <li class="nav-item pr-md-2">
+                            <a class="nav-link" href="#">Preço</a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-outline-light">Entrar</button>
+                        </li>
+                    </ul>
 
-            </div><!-- end div collapse with nav-itens-->
+                </div><!-- end div collapse with nav-itens-->
 
-        </nav><!-- end nav -->
+
+
+            </nav><!-- end nav -->
+
+        </div> <!-- end container -->
 
     </header> <!-- end header -->
 
 
 
+    <!-- start 1° section -->
+    <section id="home" class="bg-warning txt-white">
+
+        <!-- container -->
+        <div class="container">
+            <!-- start row -->
+            <div class="row">
+
+                <!-- start txt section -->
+                <div class="col-md-6 align-self-center">
+
+                    <h2 class="display-4">Suas contas, descomplicadas</h2>
+                    <p>Usado por mais de 1 milhão de pessoas, o Finans é uma ferramenta online que vai facilitar sua
+                        vida financeira</p>
+                    <form class="my-4">
+                        <div class="input-group input-group-lg">
+                            <input type="text" placeholder="Seu e-mail" class="form-control">
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-primary">Cadastre-se</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <span>
+                        Disponível para
+                        <a href="#" class="btn btn-outline-light">
+                            <i class="fa-brands fa-android fa-lg"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-light">
+                            <i class="fa-brands fa-apple fa-lg"></i>
+                        </a>
+                    </span>
+
+                </div> <!-- end text section -->
+
+                <!-- start img woman -->
+                <div class="col-md-6 d-none d-md-block">
+                    <img class="img-fluid" src="/img/capa-mulher.png" alt="Mulher">
+                </div> <!-- end img woman -->
+
+            </div> <!-- end row -->
+
+        </div> <!-- end container -->
+
+    </section> <!-- end 1° section -->
 
 
 
+    <!-- start 2° section -->
+    <section>
 
+        <!-- start container -->
+        <div class="container">
+
+            <!-- row -->
+            <div class="row py-5 border-bottom">
+
+                <!-- txt -->
+                <div class="col-md-6 align-self-center">
+
+                    <h2 class="display-5">Saiba para onde vai o seu dinheiro</h2>
+                    <p>Com o Finans, você categoriza todos os seus lançamentos. Com gráficos
+                        simples, você sabe de onde vem e para onde vai o seu dinheiro.
+                    </p>
+
+                    <button class="btn btn-primary">Veja mais</button>
+
+                </div>
+
+                <!-- img -->
+                <div class="col-md-6 d-none align-self-center d-md-block">
+                    <img class="img-fluid" src="/img/saiba.png" alt="saiba-mais">
+                </div>
+
+            </div> <!-- /row -->
+
+        </div> <!-- end container -->
+
+    </section> <!-- end 2° section -->
+
+
+
+    <!-- start 3° section -->
+    <section>
+
+        <!-- start container -->
+        <div class="container">
+
+            <!-- row -->
+            <div class="row py-5 border-bottom flex-row-reverse">
+
+                <!-- txt -->
+                <div class="col-md-6 align-self-center">
+
+                    <h2 class="display-5">Pare de pagar juros e economize</h2>
+                    <p>Manter as contas em dia é sempre um problema? O Finans avisa você: <br>
+                        Receba alertas de contas a pagar e a receber!.</p>
+
+                    <button class="btn btn-primary">Veja mais</button>
+
+                </div>
+
+                <!-- img -->
+                <div class="col-md-6 d-none align-self-center d-md-block">
+                    <img class="img-fluid" src="/img/juros.png" alt="juros">
+                </div>
+
+            </div> <!-- /row -->
+
+        </div> <!-- end container -->
+
+    </section> <!-- end 3° section -->
+
+    <!-- start 4° section -->
+    <section>
+
+        <!-- start container -->
+        <div class="container">
+
+            <!-- row -->
+            <div class="row py-5 border-bottom">
+
+                <!-- 1° col -->
+                <div class="col-md-4 align-self-center justify-content-center my-sm-3">
+
+                    <img class="img-fluid" src="/img/facil.png" alt="facil">
+
+                    <h2 class="display-5">Fácil de usar</h2>
+                    <p>O finans vai além do básico e permite que voce faça controles incríveis, essenciais
+                        para a suas finanças. Simples como tem que ser!
+                    </p>
+
+                </div>
+
+                <!-- 2° col -->
+                <div class="col-md-4 align-self-center justify-content-center my-sm-3">
+
+                    <img class="img-fluid" src="/img/economize.png" alt="economize">
+
+                    <h2 class="display-5">Economize seu tempo</h2>
+                    <p>O finans vai além do básico e permite que voce faça controles incríveis, essenciais
+                        para a suas finanças. Simples como tem que ser!
+                    </p>
+
+                </div>
+
+                <!-- 3° col -->
+                <div class="col-md-4 align-self-center justify-content-center my-sm-3">
+
+                    <img class="img-fluid" src="/img/suporte.png" alt="suporte">
+
+                    <h2 class="display-5">Suporte amigo</h2>
+                    <p>Dúvidas? Perguntas? Nosso suporte super legal ajuda você! A gente tá aqui pra resolver seus
+                        problemas e deixar sua vida bem mais fácil
+                    </p>
+
+                </div>
+
+
+            </div> <!-- /row -->
+
+        </div> <!-- end container -->
+
+    </section> <!-- end 4° section -->
+
+
+
+    <!-- start footer -->
+    <footer class="bg-warning">
+
+        <!-- container -->
+        <div class="container py-5">
+            
+            <!-- row -->
+            <div class="row">
+
+                <div class="col-md-8">
+                    <ul class="nav">
+                        <li class="nav-item"><a class="nav-link text-dark" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="#">Recurso</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="#">Benefícios</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="#">Preços</a></li>                     
+                    </ul>
+                </div>
+                
+
+                <div class="col-md-4">
+                    <a href="https://github.com/Arthur-Gab" class="btn btn-dark fa-lg">
+                        <i class="fa-brands fa-github">Arthur-Gab</i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/art2354/" class="btn btn-dark fa-lg">
+                        <i class="fa-brands fa-linkedin">art2354</i>
+                    </a>
+                </div>
+
+            </div> <!-- /row -->
+
+        </div> <!-- /container -->
+
+    </footer><!-- /footer -->
 
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->

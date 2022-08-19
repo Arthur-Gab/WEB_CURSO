@@ -14,82 +14,12 @@ body {
     background-color: #f8f8f8;
 }
 
-/* Header 
+
+/* 1° Section
 ---------------------------------------------- */
-header {
-    padding: 0.5rem 1rem;
+.txt-white {
+    color: #fff;
 }
 
-/* Logo 
--------------------------- */
-h1 {
-    margin: 0;
-    padding: 0;
-}
-
-header h1>a {
-    width: 8rem;
-    height: 2rem;
-    display: block;
-    background: url(../img/logo.png) center no-repeat;
-    background-size: contain;
-    text-indent: -999px;
-}
-
-header>nav>button.navbar-toggler>i {
-    font-size: 2rem;
-}
-
-header nav ul li {
-    padding: 0 0.5rem;
-}
-
-header nav ul li a {
-    color: #464a4e;
-    font-size: medium;
-    text-decoration: none;
-    background-color: transparent;
-    -webkit-text-decoration-skip: objects;
-}
-
-header nav ul li a:hover {
-    color: #f8f8f8;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-
-
-/* Media Query
+/* Footer
 ---------------------------------------------- */
-
-@media (max-width: 575.98px) { 
-
-}
-
-/* Small devices (landscaoe phones, 576px>) */
-@media (min-width: 576px) and (max-width: 768.98px) {
-
-}
-
-/* Medium devices (tablets, 768px>) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-
-}
-
-/* Large devices (desktops, 992px>) */
-@media (min-width: 992px) and (max-width: 1119.98px) {
-    
-    header {
-        padding: .5rem rem;
-    }
-
-}
-
-/* Extra Large devices (large desktops, 1200px>) */
-@media (min-width: 1200px) {
-    
-    header {
-        padding: .5rem rem;
-    }
-
-}
