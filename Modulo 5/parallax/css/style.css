@@ -15,27 +15,27 @@ html, body {
 }
 
 .parallax1 {
-    background-image: url(/img/imagem1.jpg);
+    background-image: url(../img/imagem1.jpg);
 }
 
 .parallax2 {
-    background-image: url(/img/imagem2.jpg);
+    background-image: url(../img/imagem2.jpg);
 }
 
 .parallax3 {
-    background-image: url(/img/imagem3.jpg);
+    background-image: url(../img/imagem3.jpg);
 }
 
 .parallax4 {
-    background-image: url(/img/imagem4.jpg);
+    background-image: url(../img/imagem4.jpg);
 }
 
 .parallax5 {
-    background-image: url(/img/imagem5.jpg);
+    background-image: url(../img/imagem5.jpg);
 }
 
 .parallax6 {
-    background-image: url(/img/imagem6.jpg);
+    background-image: url(../img/imagem6.jpg);
 }
 
 .txt-parallax {

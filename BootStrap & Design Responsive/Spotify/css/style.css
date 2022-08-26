@@ -1,0 +1,52 @@
+/* Layout
+****************************************************/
+html, body, section {
+    height: 100%;
+    border: 1px solid red;
+}
+
+body {
+    background: url(../img/capa.png),
+                url(../img/ruido.png),
+                linear-gradient(50deg, #ff4169, #7c26f8);
+    background-attachment: fixed;
+}
+
+/* Navegação
+****************************************************/
+nav.navbar-transparente {
+    background: rgba(0, 0, 0, .6);
+}
+
+header .navbar-nav .nav-link {
+    color: white;
+}
+
+header .navbar-nav .nav-link:hover {
+    color: #9bf0e1;
+}
+
+.divider {
+    width: 1px;
+    background: #fff;
+    margin: 12px 15px;
+}
+
+
+/* Tipografia
+****************************************************/
+h1 {
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    margin-bottom: 3vh;
+    color:#fff;
+}
+
+/* Media
+****************************************************/
+@media (width<576px) {
+    .display-1{
+        font-size: 5em;
+        font-weight: 700;
+    }
+}

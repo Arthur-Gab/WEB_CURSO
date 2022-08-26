@@ -19,10 +19,10 @@
     <![endif]-->
 
   <!-- Estilo customizado -->
-  <link rel="stylesheet" type="text/css" href="css/estilo.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 
   <title>Música para todos - Spotify</title>
-    <link rel="shortcut icon" href="/imagens/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="/imagens/favicon.png" type="image/x-icon">
 
 </head>
 
@@ -30,56 +30,89 @@
 
 
   <!-- start header -->
-  <header class="">
+  <header>
 
-    <!-- start container -->
-    <div class="container">
-      <!-- start navbar -->
-      <nav class="navbar navbar-expand-sm ">
+    <!-- start navbar -->
+    <nav class="navbar navbar-expand-sm fixed-top px-md-4 navbar-transparente">
 
-        <!-- logo -->
-        <a href="#" class="navbar-brand">
+      <!-- logo -->
+      <a href="#" class="navbar-brand">
+        <img src="img/spotify.svg" alt="" width="142px">
+      </a>
 
-        </a>
+      <!-- button collapse -->
+      <button class="navbar-toggler text-white" data-toggle="collapse" data-target="#header-navbar"
+        style="border: none;">
+        <i class="fa-solid fa-bars fa-2x"></i>
+      </button>
 
-        <!-- button collapse -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-navbar"
-          aria-controls="header-navbar" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fa-solid fa-bars fa-lg"></i>
-        </button>
+      <!-- div collapse with nav-itens -->
+      <div class="collapse navbar-collapse justify-content-end" id="header-navbar">
 
-        <!-- div collapse with nav-itens -->
-        <div class="collapse navbar-collapse justify-content-end" id="header-navbar">
+        <ul class="navbar-nav align-self-center">
 
-          <ul class="navbar-nav align-self-center">
+          <li class="nav-item pl-md-2">
+            <a class="nav-link" href="#">Premium</a>
+          </li>
+          <li class="nav-item pl-md-2">
+            <a class="nav-link" href="#">Ajuda</a>
+          </li>
+          <li class="nav-item pl-md-2">
+            <a class="nav-link" href="#">Baixar</a>
+          </li>
+          <li class="nav-item divider">
+          </li>
 
-            <li class="nav-item pl-md-2">
-              <a class="nav-link" href="#">Premium</a>
-            </li>
-            <li class="nav-item pl-md-2">
-              <a class="nav-link" href="#">Ajuda</a>
-            </li>
-            <li class="nav-item pl-md-2">
-              <a class="nav-link" href="#">Baixar</a>
-            </li>
-            <li class="nav-item pr-md-2">
-              <a class="nav-link" href="#">Inscrever-se</a>
-            </li>
-            <li class="nav-item">
-              <button class="btn">Entrar</button>
-            </li>
+          <li class="nav-item pr-md-2">
+            <a class="nav-link" href="#">Inscrever-se</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Entrar</a>
+          </li>
 
-          </ul>
+        </ul>
 
-        </div><!-- end div collapse with nav-itens-->
+      </div><!-- end div collapse with nav-itens-->
 
-
-
-      </nav><!-- end nav -->
-
-    </div> <!-- end container -->
+    </nav><!-- end nav -->
 
   </header> <!-- end header -->
+
+  
+  <!-- start home -->
+  <section id="home" class="d-flex align-items-center">
+    <!-- container -->
+    <div class="container">
+
+      <!-- row -->
+      <div class="row">
+
+        <!-- col-12 -->
+        <div class="col text-center">
+
+          <h1 class="display-1">Música para todos</h1>
+
+          <a href="#" class="btn btn-danger">Aproveite o Spotify Free</a>
+          <a href="#" class="btn btn-light">Obter Spotify Premium</a>
+
+        </div> <!-- /col-12 -->
+
+      </div> <!-- /row -->
+
+    </div> <!-- /container -->
+
+  </section>   <!-- end home -->
+
+
+
+
+
+
+
+
+
+
+
 
 
 
