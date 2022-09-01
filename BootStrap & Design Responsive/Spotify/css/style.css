@@ -177,6 +177,10 @@ footer ul.navbar-nav a:hover {
         margin: 0;
     }
 
+    .link-navbar-top-size {
+        font-size: .9em;
+    }
+
     .display-1 {
         font-size: 3.45em;
     }
