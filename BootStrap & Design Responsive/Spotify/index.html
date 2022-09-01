@@ -90,10 +90,42 @@
         <!-- col-12 -->
         <div class="col text-center">
 
-          <h1 class="display-1">Música para todos</h1>
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 
-          <a href="#" class="btn btn-danger btn-lg btn-custom btn-roxo">Aproveite o Spotify Free</a>
-          <a href="#" class="btn btn-outline-light btn-lg btn-custom">Obter Spotify Premium</a>
+            <!-- Content Carrousel -->
+            <div class="carousel-inner">
+
+              <!-- Content 1 -->
+              <div class="carousel-item active">
+                <h1 class="display-1">Música para todos</h1>
+
+                <a href="#" class="btn btn-danger btn-lg btn-custom btn-roxo ">Aproveite o Spotify Free</a>
+                <a href="#" class="btn btn-outline-light btn-lg btn-custom ">Obter Spotify Premium</a>
+              </div>
+              <!-- Content 2 -->
+              <div class="carousel-item">
+                
+                <h1 class="display-1">As melhores rádios</h1>
+
+                <a href="#" class="btn btn-outline-light btn-lg btn-custom">
+                  <i class="fa-solid fa-music"></i>
+                  Ouça Agora
+                </a>
+              </div>
+
+            </div>
+
+            <!-- Controllers Carrousel -->
+            <a class="carousel-control-prev mt-carousel-control" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next mt-carousel-control" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+
+          </div>
 
         </div> <!-- /col-12 -->
 
@@ -146,7 +178,7 @@
 
         <div class="col-md-6">
 
-          <h2>O que o Spotify tem?</h2>
+          <h2 class="mb-h2">O que o Spotify tem?</h2>
 
           <h3>Músicas</h3>
           <p>O Spotify tem milhões de músicas. Escute seus sons favoritos, descubra novas músicas
@@ -184,7 +216,7 @@
         <!-- start texto recursos-->
         <div class="col-md-4">
 
-          <h2>Fácil</h3>
+          <h2 class="mb-h2">Fácil</h3>
 
             <h3>Buscar
           </h2>
@@ -230,14 +262,14 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-md-2">
-          <img src="img/spotify.svg" alt="logo" width="142px">
+        <div class="col-md-2 mt-3">
+          <img src="img/spotify.svg" alt="logo" width="142px" class="img-fluid">
         </div>
-        <div class="col-md-2">
-          
+        <div class="col-md-2 mt-3 ">
+
           <h4>Company</h4>
 
-          <ul class="navbar-nav">
+          <ul class="navbar-nav mt-2">
             <li><a href="#">Sobre</a></li>
             <li><a href="#">Empregos</a></li>
             <li><a href="#">Imprensa</a></li>
@@ -245,18 +277,18 @@
           </ul>
 
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 mt-3">
 
           <h4>Comunidade</h4>
 
-          <ul class="navbar-nav">
+          <ul class="navbar-nav mt-2">
             <li><a href="#">Artistas</a></li>
             <li><a href="#">Desenvolvedores</a></li>
             <li><a href="#">Marcas</a></li>
           </ul>
 
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 mt-3 ml-md-fix">
 
           <h4>Links Uteis</h4>
 
@@ -267,10 +299,10 @@
           </ul>
 
         </div>
-        <div class="col-md-4">
+        <div class="mt-3 col-md-3 col-lg-4">
 
-          <ul class="navbar-nav flex-row justify-content-end">
-            
+          <ul class="navbar-nav flex-row justify-content-sm-start justify-content-md-center">
+
             <li class="p-footer-img">
               <a href="#">
                 <img src="img/facebook.png" alt="facebook">

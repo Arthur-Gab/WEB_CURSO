@@ -2,7 +2,6 @@
 ****************************************************/
 html, body, #home {
     height: 100%;
-    border: 1px solid red;
     overflow-x: hidden;
 }
 
@@ -134,16 +133,12 @@ footer h4 {
 
 footer ul.navbar-nav a {
     color: white;
-    font-size: 0.85em;
+    font-size: 0.8em;
 }
 
 footer ul.navbar-nav a:hover {
     color: #9bf0e1;
     text-decoration: none;
-}
-
-.p-footer-img {
-    padding: 0px 5px;
 }
 
 
@@ -159,6 +154,18 @@ footer ul.navbar-nav a:hover {
     #home a.btn-custom {
         font-size: .9em;
         margin-bottom: 1vh;
+    }
+
+    .mt-carousel-control {
+        margin-top: 20px;
+    }
+
+    .mb-h2 {
+        margin-bottom: 15px;
+    }
+
+    .p-footer-img {
+        padding: 0px 5px;
     }
 
  }
@@ -178,6 +185,13 @@ footer ul.navbar-nav a:hover {
         font-size: 1em;
     }
 
+    .mb-h2 {
+        margin-bottom: 15px;
+    }
+
+    .p-footer-img {
+        padding: 0px 5px;
+    }
 
  }
 
@@ -185,11 +199,16 @@ footer ul.navbar-nav a:hover {
 @media (min-width: 768px) and (max-width: 991.98px) { 
 
     .display-1 {
-        font-size: 4.6em;
+        font-size: 3.3em;
+        padding: 0 5px;
     }
 
     #home a.btn-custom {
         font-size: 1.1em;
+    }
+
+    .ml-md-fix {
+        margin-left: 24px;
     }
 
  }
@@ -198,7 +217,7 @@ footer ul.navbar-nav a:hover {
 @media (min-width: 992px) and (max-width: 1199.98px) { 
 
     .display-1 {
-        font-size: 5.6em;
+        font-size: 4.5em;
     }
 
  }
@@ -206,6 +225,8 @@ footer ul.navbar-nav a:hover {
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
 
-
+    .display-1 {
+        font-size: 5.2em;
+    }
 
  }
