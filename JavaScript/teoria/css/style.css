@@ -1,0 +1,43 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+    height: 100%;
+    background-color: rgb(247, 247, 247);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    padding: 2vh 5vw;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+button,
+input {
+    font-size: 1.2em;
+    padding: 10px 25px;
+    color: blue;
+    background-color: transparent;
+    border: 1px solid blue;
+    border-radius: 6px;
+}
+
+button:hover {
+    background-color: blue;
+    color: white;
+}

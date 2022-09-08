@@ -7,13 +7,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Events</title>
 
+    <link rel="stylesheet" href="css/style.css">
+
     <script src="js/eventos.js" defer></script>
 
 </head>
 
 <body>
 
-    
+
+    <div>
+        
+        <div class="container">
+            <h1>Eventos de Mouse</h1>
+
+            <button onclick="alertBtn()">onClick</button>
+            <button ondblclick="alertBtn()">onDblClickButton</button>
+            <button onmouseup="alertBtn()">onMouseUp</button>
+            <button onmouseover="alertBtn()">onMouseOver</button>
+            <button onmouseout="alertBtn()">onMouseOut</button>
+            
+            <button onclick="alertBtnClick()" onmouseout="alertBtnOut()">Click & Over</button>
+        </div>
+
+        <div class="container">
+            <h1>Eventos de Teclado</h1>
+
+            <form action="">
+                <input onkeyup="teclaAlert()" type="text" placeholder="Key Up">
+                <input onkeydown="teclaAlert()" type="text" placeholder="Key Down">
+                <input onkeypress="teclaAlert()" type="text" placeholder="Key Press">
+            </form>
+        </div>
+
+        <div class="container">
+            <h1>Eventos de Janela</h1>
+
+            
+        </div>
+
+
+
+    </div>
+
 
 </body>
 
