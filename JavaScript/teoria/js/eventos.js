@@ -32,6 +32,13 @@ function teclaAlert() {
 
 /*
     Janela/Frame Events
-    onresize - capturar a janela e disparar uma ação dependendo da resolução
+    onresize - capturar a janela e disparar uma ação dependendo da resolução (body)
     onscroll - quando o scroll do mouse é acionado
+*/
+
+/*
+    Formulários Events
+    onfocus - recebe o clique
+    onblur - perde o foco
+    onchange - estado do elemtno modificado (type = 'select')
 */

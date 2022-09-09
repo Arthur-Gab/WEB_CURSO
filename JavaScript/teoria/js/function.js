@@ -30,3 +30,12 @@ var exibirSaudacao = function () {
     console.log('Ola ' + getName() + ', tudo bem? ')
 }
 
+function getFatorial(n) {  
+    //Aprendendo recursividade
+    if (n <= 1) {
+        return n
+    } else {
+        return (n * fat(n - 1));
+    }
+}
+

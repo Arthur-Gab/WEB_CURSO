@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script src="js/eventos.js" defer></script>
+    <script src="js/function.js" defer></script>
 
 </head>
 
-<body>
-
+<body onresize="console.log('Evento disparado')">
 
     <div>
-        
+
         <div class="container">
             <h1>Eventos de Mouse</h1>
 
@@ -26,7 +26,7 @@
             <button onmouseup="alertBtn()">onMouseUp</button>
             <button onmouseover="alertBtn()">onMouseOver</button>
             <button onmouseout="alertBtn()">onMouseOut</button>
-            
+
             <button onclick="alertBtnClick()" onmouseout="alertBtnOut()">Click & Over</button>
         </div>
 
@@ -34,19 +34,45 @@
             <h1>Eventos de Teclado</h1>
 
             <form action="">
-                <input onkeyup="teclaAlert()" type="text" placeholder="Key Up">
-                <input onkeydown="teclaAlert()" type="text" placeholder="Key Down">
-                <input onkeypress="teclaAlert()" type="text" placeholder="Key Press">
+                <input onkeyup="teclaAlert()" type="text" placeholder="Key Up" disabled>
+                <input onkeydown="teclaAlert()" type="text" placeholder="Key Down" disabled>
+                <input onkeypress="teclaAlert()" type="text" placeholder="Key Press" disabled>
             </form>
         </div>
 
-        <div class="container">
+        <div class="container onscroll" onscroll="console.log('Evento de Scroll')">
             <h1>Eventos de Janela</h1>
 
-            
+            <h2>On Scroll & Resize</p>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi iusto aspernatur numquam corporis sit
+                    minima blanditiis, facere natus necessitatibus optio distinctio eveniet neque eligendi ipsum saepe
+                    iste possimus suscipit tempora.
+                    Impedit dolore ullam nostrum aliquam sint sequi eos ab labore saepe iure, at aliquid cum commodi,
+                    tempore aspernatur maiores incidunt voluptatibus voluptatem libero qui perspiciatis eaque. Sunt
+                    natus iure neque.
+                    Alias doloribus sunt fuga accusamus ipsam nulla ut nihil eos id itaque. Placeat ipsum consequuntur
+                    maiores iusto sit nesciunt optio repellendus! Placeat voluptatem, omnis esse minima exercitationem
+                    consectetur laudantium adipisci?
+                    Quae explicabo sed ad eos ducimus atque quam suscipit aperiam esse quos omnis quod ab nemo magnam,
+                    quaerat vero! Voluptatibus a illum qui, dolor soluta eligendi accusantium ipsam beatae vel.
+                    Exercitationem, soluta eum quasi optio alias natus, nisi laboriosam placeat dignissimos illo, sit
+                    deserunt! Culpa corporis soluta assumenda error voluptates dignissimos ex qui deserunt reiciendis
+                    exercitationem dolores, blanditiis nulla commodi!</p>
+
         </div>
 
+        <div class="container">
+            <h1>Evento de Formulários</h1>
 
+            <input type="text" onfocus="console.log('Recebeu o foco')" 
+            onblur="console.log('Perdeu o foco')">
+
+            <select onchange="console.log('Estado foi modificado')" class="btn">
+                <option value="1">First Option</option>
+                <option value="2">Second Option</option>
+            </select>
+        </div>
 
     </div>
 

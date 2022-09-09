@@ -1,3 +1,5 @@
+/* Estrutura
+---------------------------------------------*/
 html {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -12,32 +14,70 @@ html {
     box-sizing: inherit;
 }
 
-body {
+* {
+    margin: 0;
+    padding: 0;
+}
+ /* width */
+ *::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  *::-webkit-scrollbar-track {
+    background-color: #EBEDF2;
+  }
+  
+  /* Handle */
+  *::-webkit-scrollbar-thumb {
+    background: #5852F2;
+    border-radius: 10px;
+  }
+  
+  body {
     height: 100%;
-    background-color: rgb(247, 247, 247);
+    background-color: #EBEDF2;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
 }
 
+
+/* Estilos
+----------------------------------------------------*/
 .container {
-    padding: 2vh 5vw;
+    padding: 5vh 5vw;
 }
 
 h1 {
     font-size: 2.5em;
+    padding-bottom: 2vh;
+    margin-bottom: 2vh;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
 button,
-input {
+input,
+.btn {
     font-size: 1.2em;
     padding: 10px 25px;
     color: blue;
     background-color: transparent;
     border: 1px solid blue;
     border-radius: 6px;
+    cursor: pointer;
 }
 
 button:hover {
     background-color: blue;
     color: white;
 }
+
+.onscroll {
+    height: 500px;
+    width: 50%;
+    background-color: beige;
+    overflow-y: auto;
+}
+
+
+ 
