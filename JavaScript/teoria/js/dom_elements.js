@@ -1,3 +1,5 @@
+// Manipulando txt
+
 function confirmDataType() {
 
     // Selecionar o valor digitado
@@ -16,4 +18,9 @@ function confirmDataType() {
         document.getElementById('apenas_numero').value = caracter
     }
 
+}
+
+function modificarCor(cor) {
+    // Mudando a cor
+    document.getElementById('demo-painting').style.backgroundColor = cor;
 }
