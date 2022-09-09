@@ -7,16 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arvore de Elementos DOM</title>
 
-    <script src="js/dom_elements"></script>
+
 </head>
 
 <body>
 
-    <input type="text" placeholder="Digite seu Nome" 
-    id="nome_usuario" class="campo_texto"
-    name="nome"
-    >
-    
+    <input type="text" placeholder="Digite seu Nome" id="nome_usuario" class="campo_texto" name="nome">
+
+    <script>
+        // return NodeList
+        console.log(document.getElementsByName('nome'))
+
+        // return HTMLCollection
+        console.log(document.getElementsByTagName('input'))
+    </script>
+
 </body>
 
 </html>
