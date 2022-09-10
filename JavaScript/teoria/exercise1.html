@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+
+    <style>
+
+        .bg-body {
+            background-color: #f2f2f2;
+        }
+
+        .bg-yellow {
+            background-color: yellow;
+        }
+
+        .bg-red {
+            background-color: red;
+        }
+
+        .bg-green {
+            background-color: green;
+        }
+
+    </style>
+
+    <script src="js/dom_elements.js"></script>
+</head>
+
+<body>
+
+    
+    <!-- 1) Crie um campo <input type="text"> e aplique os seguintes controles com base nos
+    eventos abaixo:
+    • No evento de foco modifique o background do input para amarelo.
+    • Quando o campo perder o foco, recupere o seu respectivo valor e:
+    Caso o conteúdo contido no campo tenha menos de 3 caracteres o mesmo
+    deve ter seu background alterado para vermelho.
+    Caso o conteúdo contido no campo tenha 3 caracteres ou mais o background
+    deve ser alterado para verde -->
+
+    <input type="text" id="demo-input" onfocus="modificaBackground()" onblur="modificaBackground2()">
+
+</body>
+
+</html>
