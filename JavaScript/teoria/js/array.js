@@ -1,97 +1,97 @@
-// // var array = []
-// // var array = Array('Maça', 'Banana', 'Uva', 'Morango')
-// // var array = ['Maça', 'Banana', 'Uva', 'Morango']
+// var array = []
+// var array = Array('Maça', 'Banana', 'Uva', 'Morango')
+// var array = ['Maça', 'Banana', 'Uva', 'Morango']
 
-// let array = Array()
-// array[0] = 'Maça'
-// array[1] = 'Banana'
-// array[2] = 'Uva'
-// array[3] = 'Morango'
-// // array.length fica errado no caso acima
+let array = Array()
+array[0] = 'Maça'
+array[1] = 'Banana'
+array[2] = 'Uva'
+array[3] = 'Morango'
+// array.length fica errado no caso acima
 
-// // add o ultimo elemento
-// console.log('Adicionando em Ultimo')
-// array.push('Laranja')
-// console.log(array)
-
-
-// // remove o ultimo elemento
-// console.log('Removendo o Ultimo')
-// array.pop()
-// console.log(array)
+// add o ultimo elemento
+console.log('Adicionando em Ultimo')
+array.push('Laranja')
+console.log(array)
 
 
-// // add o primeiro elemento 
-// console.log('Adicionando em Primeiro')
-// array.unshift('Abacaxi')
-// console.log(array)
-// // Caso eu nao tivesse usado shift abaixo, o array teria desde o 
-// // primeiro log do array ter colocado o Abacaxi como elemento 0
+// remove o ultimo elemento
+console.log('Removendo o Ultimo')
+array.pop()
+console.log(array)
 
 
-// // remove o primeiro elemento
-// console.log('Removendo em Primeiro')
-// array.shift()
-// console.log(array)
+// add o primeiro elemento 
+console.log('Adicionando em Primeiro')
+array.unshift('Abacaxi')
+console.log(array)
+// Caso eu nao tivesse usado shift abaixo, o array teria desde o 
+// primeiro log do array ter colocado o Abacaxi como elemento 0
 
 
-// // procurar o indice
-// console.log('Procurando indice de UVA: ' + array.indexOf('Uva'))
+// remove o primeiro elemento
+console.log('Removendo em Primeiro')
+array.shift()
+console.log(array)
 
 
-// // remover um item pela posição do índice
-// console.log('Remover um item a partir da posição do índice "pos" e qtd "n"')
-// // array.splice(pos, qtd)
-// array.splice(1, 1)
-// console.log(array)
+// procurar o indice
+console.log('Procurando indice de UVA: ' + array.indexOf('Uva'))
 
 
-// // Procurar elemento
-// console.log(array)
-// console.log('IndexOf Uva: ' + array.indexOf('Uva'))
-// // o indexOf é case sensitive
+// remover um item pela posição do índice
+console.log('Remover um item a partir da posição do índice "pos" e qtd "n"')
+// array.splice(pos, qtd)
+array.splice(1, 1)
+console.log(array)
 
 
-// // Copiar um array, pode ser especificado onde começar e onde terminar a copia
-// // ex slice(2,4)
-// console.log('Copiar Array')
-// let copiaArray = array.slice(1, 3);
-// console.log(copiaArray)
+// Procurar elemento
+console.log(array)
+console.log('IndexOf Uva: ' + array.indexOf('Uva'))
+// o indexOf é case sensitive
 
-// // Ordenar um array em js é mt simples, basta utilizar o metódo sort
-// // Mas esse metódo é especifico pra Alpha Numerico
-// console.log('Ordenar Array')
-// array.sort()
-// console.log(array)
+
+// Copiar um array, pode ser especificado onde começar e onde terminar a copia
+// ex slice(2,4)
+console.log('Copiar Array')
+let copiaArray = array.slice(1, 3);
+console.log(copiaArray)
+
+// Ordenar um array em js é mt simples, basta utilizar o metódo sort
+// Mas esse metódo é especifico pra Alpha Numerico
+console.log('Ordenar Array')
+array.sort()
+console.log(array)
 
 /* Array Multidimensionals
 ------------------------------------------------------------*/
-// let arrayM = Array()
-// arrayM ['cavaleiros'] = Array()
-// arrayM ['cavalos'] = Array()
+let arrayM = Array()
+arrayM ['cavaleiros'] = Array()
+arrayM ['cavalos'] = Array()
 
-// arrayM['cavaleiros'][0] = 'Pedro'
-// arrayM['cavaleiros'][1] = 'Arthur'
-// arrayM['cavaleiros'][2] = 'Augusto'
+arrayM['cavaleiros'][0] = 'Pedro'
+arrayM['cavaleiros'][1] = 'Arthur'
+arrayM['cavaleiros'][2] = 'Augusto'
 
-// arrayM['cavalos'][0] = 'Hidra'
-// arrayM['cavalos'][1] = 'Agameno'
-// arrayM['cavalos'][2] = 'Tranquila'
+arrayM['cavalos'][0] = 'Hidra'
+arrayM['cavalos'][1] = 'Agameno'
+arrayM['cavalos'][2] = 'Tranquila'
 
-// console.log('Array Multidimensional')
-// console.log(arrayM)
+console.log('Array Multidimensional')
+console.log(arrayM)
 
-// console.log('ArrayM Ordenado')
-// arrayM.sort()
-// console.log(arrayM)
+console.log('ArrayM Ordenado')
+arrayM.sort()
+console.log(arrayM)
 
-// console.log('Array cavaleiros ordenado')
-// arrayM['cavaleiros'].sort()
-// console.log(arrayM)
+console.log('Array cavaleiros ordenado')
+arrayM['cavaleiros'].sort()
+console.log(arrayM)
 
-// console.log('Array cavalo ordenado')
-// arrayM['cavalos'].sort()
-// console.log(arrayM)
+console.log('Array cavalo ordenado')
+arrayM['cavalos'].sort()
+console.log(arrayM)
 
 /* Ordenando um array do tipo numerico
 ------------------------------------------------*/
