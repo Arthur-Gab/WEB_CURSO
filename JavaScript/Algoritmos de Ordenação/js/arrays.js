@@ -6,7 +6,7 @@
 */
 
 // Imports
-import {bubbleSort} from './bubble_sort.js'
+import {bubbleSort} from './ordenar_array'
 
 
 // Functions

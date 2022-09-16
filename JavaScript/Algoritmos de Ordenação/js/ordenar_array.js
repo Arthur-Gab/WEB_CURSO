@@ -1,7 +1,7 @@
 // Ordenação Bubble Sort
 export function bubbleSort(array) {
 
-    // Mostrar o arry antes da ordenação
+    // Mostrar o array antes da ordenação
     console.log(array);
 
     let swap;
@@ -22,3 +22,4 @@ export function bubbleSort(array) {
         }
     } while (swap)
 }
+
