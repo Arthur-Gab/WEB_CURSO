@@ -23,3 +23,4 @@ export function bubbleSort(array) {
     } while (swap)
 }
 
+// Ordenação

@@ -6,7 +6,7 @@
 */
 
 // Imports
-import {bubbleSort} from './ordenar_array'
+import * as arraysSort from './ordenar_array'
 
 
 // Functions
@@ -35,4 +35,4 @@ function creatArray() {
 // 2° Ordenar
 
 // Ordenar por Bubble Sort
-bubbleSort(creatArray());
+arraysSort.bubbleSort(creatArray());

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+
+    <script src="js/exercise2.js" defer></script>
+
+</head>
+
+<body>
+    <!--     1) Crie uma aplicação web contendo um campo para entrada de texto (input text) e dois
+    botões (buttons), sendo um botão com a descrição "Adicionar" e outro com a descrição
+    "Ordenar", conforme imagem abaixo:
+    Após criar os elementos de interação com o usuário acima, crie um Array de nome objetos contendo
+    os seguintes valores:
+    var objetos = Array('Cadeira', 'Impressora', 'Garfo')
+    Os próximos passos são:
+    A) Ao clicar no botão "Adicionar" disparar função que irá:
+    • Recuperar o valor contido no campo de texto.
+    • Verificar se o valor está vazio ou preenchido.
+    o Se vazio, exibir alert com a mensagem "Informe um valor válido".
+    o Se preenchido:
+    ▪ Verificar se o valor informado já existe dentro do Array objetos.
+    ▪ Se existir, exibir alert com a mensagem "Objeto já foi adicionado".
+    ▪ Se não existir:
+    • Incluir o valor preenchido no campo dentro do Array.
+    • Efetuar um console.log do Array para debug (checar se está
+    funcionado).
+    • Limpar o valor contido no campo de entrada de texto.
+    B) Ao clicar no botão "Ordenar" disparar função que irá:
+    • Ordenar de forma alfabética os valores do Array de objetos.
+    • Efetuar um console.log do Array para debug (checar se está funcionado) -->
+
+
+    <input type="text" id="obj" placeholder="Informe um Obj..." autofocus>
+    <button id="add_obj" onclick="addObj()">Adicionar</button>
+    <button id="sort_obj" onclick="sortObj()">Ordenar</button>
+
+</body>
+
+</html>
