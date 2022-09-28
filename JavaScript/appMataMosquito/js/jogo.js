@@ -14,12 +14,16 @@ function getScreenY() {
 }
 
 // Crair posições pra mosca de forma randomicas baseada nos valores do tamanho da tela
-let positionX = function() {
-    return Math.floor(Math.random() * getScreenX());
+let positionX = function () {
+    let posX = Math.floor(Math.random() * getScreenX() - 117)
+
+    return posX < 0 ? 0 : posX;
 }
 
-let positionY = function() {
-    return Math.floor(Math.random() * getScreenY());
+let positionY = function () {
+    let posY = Math.floor(Math.random() * getScreenY() - 122.5);
+
+    return posY < 0 ? 0 : posY
 }
 
 // Criar a mosca no html
@@ -30,14 +34,9 @@ function creatMosca() {
     mosca.classList.add(randomClassMosca())
 
     // posicionar a mosca
-    mosca.style.position = "relative"
+    mosca.style.position = "absolute"
     mosca.style.left = positionX() + "px";
     mosca.style.top = positionY() + "px";
-
-    // Por algum motivo que ainda n descrobri os valores tao dentro do limite
-    // Mas ainda assim tem vezes que a mosca escapa pra fora da tela
-    console.log("left:", mosca.style.left)
-    console.log("top:", mosca.style.top)
 
     // inserir a mosca no body
     document.body.appendChild(mosca);
@@ -50,8 +49,9 @@ function randomClassMosca() {
     return moscaClass[indice];
 }
 
-// Spawnar a mosca
+// Spawnar a mosca 
 function spawnMosca() {
+    // usando pra debuggar
     console.log("Resolução:", getScreenX(), getScreenY());
     creatMosca();
 }
@@ -59,9 +59,12 @@ function spawnMosca() {
 // Temporizar o spawn da mosca
 let moscaControl = setInterval(spawnMosca, 1000);
 
+// Parar o spawn com o button
 function stopInterval() {
     clearInterval(moscaControl);
 }
+
+
 
 
 
