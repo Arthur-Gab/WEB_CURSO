@@ -23,3 +23,12 @@
     width: 117px;
     height: 121.5px;
 }
+
+/* Lado que a mosca olha  */
+.side-a{
+    transform: scaleX(1);
+}
+
+.side-b {
+    transform: scaleX(-1);
+}

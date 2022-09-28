@@ -15,7 +15,7 @@ function getScreenY() {
 
 // Crair posições pra mosca de forma randomicas baseada nos valores do tamanho da tela
 let positionX = function () {
-    let posX = Math.floor(Math.random() * getScreenX() - 117)
+    let posX = Math.floor(Math.random() * getScreenX() - 117);
 
     return posX < 0 ? 0 : posX;
 }
@@ -23,23 +23,7 @@ let positionX = function () {
 let positionY = function () {
     let posY = Math.floor(Math.random() * getScreenY() - 122.5);
 
-    return posY < 0 ? 0 : posY
-}
-
-// Criar a mosca no html
-function creatMosca() {
-    // crair a mosca
-    let mosca = document.createElement("img");
-    mosca.src = "img/mosca.png";
-    mosca.classList.add(randomClassMosca())
-
-    // posicionar a mosca
-    mosca.style.position = "absolute"
-    mosca.style.left = positionX() + "px";
-    mosca.style.top = positionY() + "px";
-
-    // inserir a mosca no body
-    document.body.appendChild(mosca);
+    return posY < 0 ? 0 : posY;
 }
 
 // Aleatórizar a classe que a mosca recebe
@@ -49,15 +33,34 @@ function randomClassMosca() {
     return moscaClass[indice];
 }
 
-// Spawnar a mosca 
-function spawnMosca() {
-    // usando pra debuggar
-    console.log("Resolução:", getScreenX(), getScreenY());
-    creatMosca();
+// Aleatórizar o lado para que o mosquito olha - Direita ou Esquerda
+function randomSide() {
+    let moscaSide = Array("side-a", "side-b");
+    let indice = Math.floor(Math.random() * 2);
+    return moscaSide[indice];
 }
 
+// Criar a mosca no html
+function creatMosca() {
+    // Criar a img da mosca, setar o src, seu tamanho e lado que olha
+    let mosca = document.createElement("img");
+    mosca.src = "img/mosca.png";
+
+    // Atribuindo as classes de tamanho e lado que olha
+    mosca.classList.add(randomClassMosca(), randomSide());
+
+    // Posicionar a mosca
+    mosca.style.position = "absolute"
+    mosca.style.left = positionX() + "px";
+    mosca.style.top = positionY() + "px";
+
+    // Inserir a mosca no body
+    document.body.appendChild(mosca);
+}
+
+// Spawnar a mosca 
 // Temporizar o spawn da mosca
-let moscaControl = setInterval(spawnMosca, 1000);
+let moscaControl = setInterval(creatMosca, 500);
 
 // Parar o spawn com o button
 function stopInterval() {
