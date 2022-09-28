@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Size da mosca */
+.mosca-min-size {
+    /* x2,5 */
+    width: 65px;
+    height: 67px;
+}
+
+.mosca-med-size {
+    /* x3,5 */
+    width: 91px;
+    height: 94.5px;
+}
+
+.mosca-max-size {
+    /* x4,5 */
+    width: 117px;
+    height: 121.5px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM - Location</title>
+
+    <script>
+        function openGoogle() {
+            location.href = 'https://www.google.com'
+        }
+
+        function assignGoogle() {
+            location.assign('https://www.google.com')
+        }
+        
+        function replaceGoogle() {
+            location.replace('https://www.google.com')
+        }
+        
+        function reloadPage() {
+            location.reload()
+        }
+        </script>
+</head>
+
+<body>
+    <!-- locatin controlar atributos relativos a URL -->
+    <button onclick="openGoogle()">Href Google</button>
+    <button onclick="assignGoogle()">Assign Google</button>
+    <button onclick="replaceGoogle()">Replace Google</button>
+    <button onclick="reloadPage()">Reload Page</button>
+
+    <p>With replace isn't possible to use "back"</p>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM - Timing</title>
+
+    <script>
+
+        let time = 5;
+
+        let f = function () {
+            document.writeln(time + 's <br>')
+            time--
+
+            // Parando o evento pra alguma coisa por ex
+            if (time === 0) {
+                clearInterval(stopTime)
+                // clearTimeOut(stopTime)
+            }
+
+            // Refresh pra controle de dados por ex
+            /* if (time === 0) {
+                location.reload()
+            } */
+        }
+
+        // Imprime uma unica vez
+        // let stopTime = setTimeout(f, 1000)
+
+        //Imprime em intervalos
+        let stopTime = setInterval(f, 1000)
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
