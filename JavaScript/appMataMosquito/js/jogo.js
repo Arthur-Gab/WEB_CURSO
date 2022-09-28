@@ -1,10 +1,3 @@
-// Testar as funções
-function getScrenSize() {
-    console.log(getScreenX(), getScreenY());
-    console.log('Posições randomicas - ' + 'X: ' + positionX() + '| Y: ' + positionY());
-    creatMosca();
-}
-
 // Criar 2 metodos pra me retornar o valor do tamanho da tela do browse
 function getScreenX() {
     // Conseguir retornar o tamanho dinamicamente da largura do browse
@@ -21,14 +14,12 @@ function getScreenY() {
 }
 
 // Crair posições pra mosca de forma randomicas baseada nos valores do tamanho da tela
-function positionX() {
-    let positionX = Math.floor(Math.random() * getScreenX());
-    return positionX;
+let positionX = function() {
+    return Math.floor(Math.random() * getScreenX());
 }
 
-function positionY() {
-    let positionY = Math.floor(Math.random() * getScreenY());
-    return positionY;
+let positionY = function() {
+    return Math.floor(Math.random() * getScreenY());
 }
 
 // Criar a mosca no html
@@ -43,8 +34,10 @@ function creatMosca() {
     mosca.style.left = positionX() + "px";
     mosca.style.top = positionY() + "px";
 
-    console.log("Left: " + mosca.style.left)
-    console.log("Top: " + mosca.style.top)
+    // Por algum motivo que ainda n descrobri os valores tao dentro do limite
+    // Mas ainda assim tem vezes que a mosca escapa pra fora da tela
+    console.log("left:", mosca.style.left)
+    console.log("top:", mosca.style.top)
 
     // inserir a mosca no body
     document.body.appendChild(mosca);
@@ -57,7 +50,14 @@ function randomClassMosca() {
     return moscaClass[indice];
 }
 
-let moscaControl = setInterval(getScrenSize, 2000);
+// Spawnar a mosca
+function spawnMosca() {
+    console.log("Resolução:", getScreenX(), getScreenY());
+    creatMosca();
+}
+
+// Temporizar o spawn da mosca
+let moscaControl = setInterval(spawnMosca, 1000);
 
 function stopInterval() {
     clearInterval(moscaControl);
