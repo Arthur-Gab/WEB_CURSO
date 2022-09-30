@@ -98,7 +98,7 @@ function lossLife() {
     } else {
 
         // Game Over
-        alert("Game Over")
+        location.href = "game_over.html"
 
     }
 

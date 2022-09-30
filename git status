@@ -1,0 +1,35 @@
+[33m5e202e6[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Controlando os pontos de vida e criado o cenário
+[33mdea8bdc[m Criado a lógica pra nascer somente 1 mosca a cada segundo
+[33m622d891[m Implementação do Insertion Sort em JS
+[33m926d936[m Criado um metodo pra mudar pra onde o mosquito olha de formar randomica na sua criação
+[33meed460d[m Consertado as moscas spawnarem fora do viewport
+[33m80261af[m Limpando um pouco o código e percebi que a lógica ta funcionando do jeito que era pra funcionar, entretando, mesmo tendo os valores dentro do limite a mosca ainda aparece fora da tela
+[33m2192388[m Criando o app mata mosquito, implementação da lógica de pegar ovalor do tamanho da tela, criar uma posição random baseado nesse tamanho, criar uma mosca com posição variada sem escapar da tela (oq ta dando algum erro em algum lugar) e randomziar a classe da mosca entre min, med e max
+[33mce4c2c7[m Aplicando alguns aprendizados do curso de Dev Web
+[33mdc39e5b[m Removendo comentários e deixando o código do array executalvém
+[33maafa2b3[m Estudando um pouco o array em js, ordenação, adicionar, remover, copiar, 'recortar'
+[33m7b471ff[m Testando aprendizados da Faculdade - Algoritmos de Ordenação (Bubble Sort)
+[33mfd444b1[m Projeto Calculadora concluido, mas fiquei com uma pulga atras da orelha por nao ser capaz de usar uma variavel pra deixar o codigo mais limpo ao referenciar o #result
+[33m4ee951c[m Desenvolvendo uma calculadora, Html + CSS criado, começando o JS
+[33mcbab4b0[m Aprendendo alguns conceitos novos em DOM, e utilizando eles no exercio1
+[33mcf2fa4f[m Aprendi a modificar o style interno do elemento pelo DOM + JS
+[33m64669d1[m Aprendendo um pouco sobre manipulação de valores txt pelo DOM
+[33m4e532ac[m Alguns eventos js foram praticados, começando o aprendizado de DOM
+[33mf80fbf4[m Realizado alguns exercicios e Estudo sobre Events DOM
+[33m3c13593[m Estudando JS e testando algumas coisas
+[33mf76700e[m Corrigindo alguns erros despercebidos no Spotify, hehe
+[33m84f43ae[m Correção de alguns bugs em responsividade do Spotify e implementação do Carrousel no Spotify
+[33mf898523[m Spotify Terminado, mas sem o carousel
+[33m3c7b3fd[m Header feito, prosseguindo para os conteudos centrais no projeto Spotify
+[33m73c0ed2[m hotfix img
+[33m41127d3[m Termino do Projeto Finans e inicio do Projeto Sotify - BootStrap4
+[33mf320267[m Projeto Finans finalizado, mas ainda pode ser melhorado a questao do layout em outras resoluções sm xm
+[33m96bc786[m header do projeto finans, mas o header ta escapando pora fora do viewport
+[33m25b82a4[m Finalização do curso de BootStrap e Inicio do projeto Finans
+[33md9aed01[m Atualização BootStrap4 navbars, links, forms
+[33mfddab74[m BootStrap4, MediaType, MediaQuery
+[33m84b50c1[m atualização parallax
+[33mf24a397[m footer do projeto-museu
+[33mba0a45e[m projeto museu nacional (flex-box) sem responsividade
+[33m57ef169[m Testando novos Inputs
+[33md0d5bef[m comiti de exercicios do Modulo 3 ao 6

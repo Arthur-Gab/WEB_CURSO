@@ -4,6 +4,18 @@
     box-sizing: border-box;
 }
 
+html,
+body,
+.container {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 body {
     background-image: url(../img/bg.jpg);
     background-repeat: no-repeat;
