@@ -6,8 +6,7 @@
 */
 
 // Imports
-import * as arraysSort from './ordenar_array'
-
+import * as arraysSort from './ordenar_array.js'
 
 // Functions
 function creatArray() {
@@ -25,6 +24,7 @@ function creatArray() {
         array[i] = Math.floor(Math.random() * 100);
     }
     
+    array.push(3);
     // Retornar o array para ele ser usado em outras funções
     return array;
 }
@@ -36,3 +36,6 @@ function creatArray() {
 
 // Ordenar por Bubble Sort
 arraysSort.bubbleSort(creatArray());
+
+// Ordenar por Insetion Sort
+arraysSort.insertionSort(creatArray());
