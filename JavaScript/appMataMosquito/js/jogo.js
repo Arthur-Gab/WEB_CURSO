@@ -42,6 +42,10 @@ function randomSide() {
 
 // Criar a mosca no html
 function creatMosca() {
+    // Remover o elementos mosca, caso exista
+    if (document.querySelector("#mosca"))
+        document.querySelector("#mosca").remove();
+
     // Criar a img da mosca, setar o src, seu tamanho e lado que olha
     let mosca = document.createElement("img");
     mosca.src = "img/mosca.png";
@@ -53,6 +57,7 @@ function creatMosca() {
     mosca.style.position = "absolute"
     mosca.style.left = positionX() + "px";
     mosca.style.top = positionY() + "px";
+    mosca.id = "mosca";
 
     // Inserir a mosca no body
     document.body.appendChild(mosca);
@@ -60,7 +65,7 @@ function creatMosca() {
 
 // Spawnar a mosca 
 // Temporizar o spawn da mosca
-let moscaControl = setInterval(creatMosca, 500);
+let moscaControl = setInterval(creatMosca, 1000);
 
 // Parar o spawn com o button
 function stopInterval() {
