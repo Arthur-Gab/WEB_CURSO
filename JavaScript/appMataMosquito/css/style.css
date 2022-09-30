@@ -4,6 +4,26 @@
     box-sizing: border-box;
 }
 
+body {
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.painel {
+    background-color: rgba(255, 255, 255, 0.65);
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+}
+
+.lifes img{
+    padding: 0 5px;
+}
+
+.timer {
+    font-size: 1.1em;
+}
 
 /* Size da mosca */
 .mosca-min-size {
@@ -31,4 +51,11 @@
 
 .side-b {
     transform: scaleX(-1);
+}
+
+/* Consertar o bg em telas maiores */
+@media (min-width: 1200px) {
+    body {
+        background-size: 100%;
+    }
 }

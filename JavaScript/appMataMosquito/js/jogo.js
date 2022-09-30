@@ -1,3 +1,7 @@
+// Faz o controle de vidas do usuario
+let lifes = 3;
+
+
 // Criar 2 metodos pra me retornar o valor do tamanho da tela do browse
 function getScreenX() {
     // Conseguir retornar o tamanho dinamicamente da largura do browse
@@ -26,6 +30,7 @@ let positionY = function () {
     return posY < 0 ? 0 : posY;
 }
 
+
 // Aleatórizar a classe que a mosca recebe
 function randomClassMosca() {
     let moscaClass = Array("mosca-min-size", "mosca-med-size", "mosca-max-size");
@@ -40,11 +45,18 @@ function randomSide() {
     return moscaSide[indice];
 }
 
+
 // Criar a mosca no html
 function creatMosca() {
     // Remover o elementos mosca, caso exista
-    if (document.querySelector("#mosca"))
-        document.querySelector("#mosca").remove();
+    // E retirar 1 de vida
+    if (document.querySelector("#mosca")) {
+        // remover a mosca
+        flySuicide();
+
+        //perder 1 de vida
+        lossLife();
+    }
 
     // Criar a img da mosca, setar o src, seu tamanho e lado que olha
     let mosca = document.createElement("img");
@@ -58,18 +70,47 @@ function creatMosca() {
     mosca.style.left = positionX() + "px";
     mosca.style.top = positionY() + "px";
     mosca.id = "mosca";
+    // Matar a mosca com clique
+    mosca.onclick = killMosca;
 
     // Inserir a mosca no body
     document.body.appendChild(mosca);
 }
 
+function killMosca() {
+    if (document.querySelector("#mosca"))
+        document.querySelector("#mosca").remove();
+}
+
+function flySuicide() {
+    // Remover o elemento mosca
+    document.querySelector("#mosca").remove();
+}
+
+function lossLife() {
+    // Trocar o coração cheio pelo vazio e subtrair a vida do usuario
+    // Verificar se perdeu o game
+    if (lifes > 0) {
+
+        document.querySelector("#heart" + lifes).src = "img/coracao_vazio.png";
+        lifes--;
+
+    } else {
+
+        // Game Over
+        alert("Game Over")
+
+    }
+
+}
+
 // Spawnar a mosca 
 // Temporizar o spawn da mosca
-let moscaControl = setInterval(creatMosca, 1000);
+let gameModel = setInterval(creatMosca, 2000);
 
 // Parar o spawn com o button
 function stopInterval() {
-    clearInterval(moscaControl);
+    clearInterval(gameModel);
 }
 
 
