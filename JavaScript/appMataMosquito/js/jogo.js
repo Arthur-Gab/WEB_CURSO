@@ -1,7 +1,22 @@
-// Faz o controle de vidas do usuario
+/* Regras
+------------------------------------------------------------*/
+// Zerou os corações = derrota
+// Derrotou o tempo = vitória
+// Matar moscas para não perder coração
+
+
+/* Variaveis globais
+    - Controlar a vida
+    - Controlar o tempo
+------------------------------------------------------------*/
 let lifes = 3;
+let tempo = 10;
 
 
+/* Modulos para deixar a tela do jogo igual a tela do navegador
+    - Conseguir resolução do X e Y
+    - Randomizar um numero entre essas resoluções min - 0
+------------------------------------------------------------*/
 // Criar 2 metodos pra me retornar o valor do tamanho da tela do browse
 function getScreenX() {
     // Conseguir retornar o tamanho dinamicamente da largura do browse
@@ -46,6 +61,12 @@ function randomSide() {
 }
 
 
+/* Modulos da mosca
+    - Criar
+    - Remover
+    - Matar
+    - Eliminar caso sobreviva
+------------------------------------------------------------*/
 // Criar a mosca no html
 function creatMosca() {
     // Remover o elementos mosca, caso exista
@@ -87,9 +108,15 @@ function flySuicide() {
     document.querySelector("#mosca").remove();
 }
 
+
+/* Modulos para Definir derrota e vitoria
+    - Perder corações 
+    - Derrotar o tempo
+------------------------------------------------------------*/
+// Trocar o coração cheio pelo vazio e subtrair a vida do usuario
+// Verificar se perdeu o game
 function lossLife() {
-    // Trocar o coração cheio pelo vazio e subtrair a vida do usuario
-    // Verificar se perdeu o game
+
     if (lifes > 0) {
 
         document.querySelector("#heart" + lifes).src = "img/coracao_vazio.png";
@@ -98,20 +125,38 @@ function lossLife() {
     } else {
 
         // Game Over
-        location.href = "game_over.html"
+        // Para a criação de moscas e o cronometro
+        clearInterval(game)
+        clearInterval(cronometro)
+
+        location.href = "gameOver.html"
 
     }
 
 }
 
+// Cronometra o tempo do jogo
+// Caso chegue a 0, e exista ao menos 1 heart = win
+let cronometro = setInterval(function() {
+
+    tempo--;
+    document.querySelector("#cronometro").innerHTML = tempo;
+
+    if(tempo === 0 && lifes > 0)
+    {
+        // Módulo pra ir pra tela de Vitoria
+        // Para a criação de moscas e o cronometro
+        clearInterval(game)
+        clearInterval(cronometro)
+
+        location.href = "win.html"
+    }
+    
+}, 1000)
+
 // Spawnar a mosca 
 // Temporizar o spawn da mosca
-let gameModel = setInterval(creatMosca, 2000);
-
-// Parar o spawn com o button
-function stopInterval() {
-    clearInterval(gameModel);
-}
+let game = setInterval(creatMosca, 5000);
 
 
 
