@@ -6,12 +6,55 @@
 
 
 /* Variaveis globais
-    - Controlar a vida
-    - Controlar o tempo
+    - Controlar a vida - 0 derrota
+    - Controlar o tempo de jogo - 0 vitoria
+    - Selecionar a dificuldade
 ------------------------------------------------------------*/
 let lifes = 3;
-let tempo = 10;
+let tempo = 11;
+// Recupera o serach (nivel enviado pela url - ?nivel)
+let dificuldade = location.search.replace("?", "");
+// Define os ms em que novas moscas surgirão (dentro do setInterval)
+let criarMoscaTempo;
+// variaveis que tem um setInterval dentro e funções dedicadas
+let criaMosca;
+let cronometro;
 
+function startGame() {
+
+    // Recuperar o valor da dificuldade
+    let dificuldade = document.querySelector("#dificuldade").value;
+
+    // Verificar se foi informado uma dificuldade valida
+    if (dificuldade === "") {
+        alert("Selecione uma dificuldade para iniciar o jogo");
+    } else {
+        // Iniciar o jogo
+        location.href = "app.html?" + dificuldade;
+    }
+}
+
+// Níveis de dificuldade do jogo
+if (dificuldade === "facil") {
+    // 1500 ms
+    criarMoscaTempo = 1500;
+    criaMosca = setInterval(spawnMosca, criarMoscaTempo)
+    cronometro = setInterval(temporizador, 1000);
+}
+
+if (dificuldade === "normal") {
+    // 1000 ms
+    criarMoscaTempo = 1000;
+    criaMosca = setInterval(spawnMosca, criarMoscaTempo)
+    cronometro = setInterval(temporizador, 1000);
+}
+
+if (dificuldade === "dificil") {
+    // 750 ms
+    criarMoscaTempo = 750;
+    criaMosca = setInterval(spawnMosca, criarMoscaTempo)
+    cronometro = setInterval(temporizador, 1000);  
+}
 
 /* Modulos para deixar a tela do jogo igual a tela do navegador
     - Conseguir resolução do X e Y
@@ -68,7 +111,7 @@ function randomSide() {
     - Eliminar caso sobreviva
 ------------------------------------------------------------*/
 // Criar a mosca no html
-function creatMosca() {
+function spawnMosca() {
     // Remover o elementos mosca, caso exista
     // E retirar 1 de vida
     if (document.querySelector("#mosca")) {
@@ -117,18 +160,15 @@ function flySuicide() {
 // Verificar se perdeu o game
 function lossLife() {
 
-    if (lifes > 0) {
+    document.querySelector("#heart" + lifes).src = "img/coracao_vazio.png";
+    lifes--;
 
-        document.querySelector("#heart" + lifes).src = "img/coracao_vazio.png";
-        lifes--;
-
-    } else {
+    if (lifes === 0) {
 
         // Game Over
         // Para a criação de moscas e o cronometro
-        clearInterval(game)
+        clearInterval(criaMosca)
         clearInterval(cronometro)
-
         location.href = "gameOver.html"
 
     }
@@ -137,38 +177,27 @@ function lossLife() {
 
 // Cronometra o tempo do jogo
 // Caso chegue a 0, e exista ao menos 1 heart = win
-// let cronometro = setInterval(function() {
+function temporizador() {
 
-//     tempo--;
-//     document.querySelector("#cronometro").innerHTML = tempo;
+    tempo--;
+    document.querySelector("#cronometro").innerHTML = tempo;
 
-//     if(tempo === 0 && lifes > 0)
-//     {
-//         // Módulo pra ir pra tela de Vitoria
-//         // Para a criação de moscas e o cronometro
-//         clearInterval(game)
-//         clearInterval(cronometro)
+    if (tempo === 0 && lifes > 0) {
+        // Módulo pra ir pra tela de Vitoria
+        // Para a criação de moscas e o cronometro
+        clearInterval(criaMosca)
+        clearInterval(cronometro)
 
-//         location.href = "win.html"
-//     }
-    
-// }, 1000)
-
-// Spawnar a mosca 
-// Temporizar o spawn da mosca
-// let game = setInterval(creatMosca, 5000);
-
-function startGame() {
-    // Recuperar o valor da dificuldade
-    let dificuldade = document.querySelector("#dificuldade").value;
-    
-    // Verificar se foi informado uma dificuldade valida
-    if (dificuldade === "") {
-        alert("Selecione uma dificuldade para iniciar o jogo")
-    } else {
-        // Iniciar o jogo
+        location.href = "win.html"
     }
+
 }
+
+
+
+
+
+
 
 
 
