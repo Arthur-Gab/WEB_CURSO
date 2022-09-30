@@ -10,16 +10,20 @@ body,
     height: 100%;
 }
 
+body {
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
 .container {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-body {
-    background-image: url(../img/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: auto;
+.form-control {
+    width: auto;
 }
 
 .painel {

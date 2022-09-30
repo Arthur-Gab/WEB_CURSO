@@ -137,28 +137,38 @@ function lossLife() {
 
 // Cronometra o tempo do jogo
 // Caso chegue a 0, e exista ao menos 1 heart = win
-let cronometro = setInterval(function() {
+// let cronometro = setInterval(function() {
 
-    tempo--;
-    document.querySelector("#cronometro").innerHTML = tempo;
+//     tempo--;
+//     document.querySelector("#cronometro").innerHTML = tempo;
 
-    if(tempo === 0 && lifes > 0)
-    {
-        // Módulo pra ir pra tela de Vitoria
-        // Para a criação de moscas e o cronometro
-        clearInterval(game)
-        clearInterval(cronometro)
+//     if(tempo === 0 && lifes > 0)
+//     {
+//         // Módulo pra ir pra tela de Vitoria
+//         // Para a criação de moscas e o cronometro
+//         clearInterval(game)
+//         clearInterval(cronometro)
 
-        location.href = "win.html"
-    }
+//         location.href = "win.html"
+//     }
     
-}, 1000)
+// }, 1000)
 
 // Spawnar a mosca 
 // Temporizar o spawn da mosca
-let game = setInterval(creatMosca, 5000);
+// let game = setInterval(creatMosca, 5000);
 
-
+function startGame() {
+    // Recuperar o valor da dificuldade
+    let dificuldade = document.querySelector("#dificuldade").value;
+    
+    // Verificar se foi informado uma dificuldade valida
+    if (dificuldade === "") {
+        alert("Selecione uma dificuldade para iniciar o jogo")
+    } else {
+        // Iniciar o jogo
+    }
+}
 
 
 
