@@ -45,5 +45,13 @@ const array = creatArray();
 // console.log(array);
 
 // Ordenar por  Merge Sort
-sort.mergeSort(array, 0, array.length - 1);
-console.log(array);
+// sort.mergeSort(array, 0, array.length - 1);
+// console.log(array);
+
+// Ordenação por Quick Sort
+// sort.quickSort(array, 0, array.length - 1);
+// console.log(array);
+
+// Ordenação por Shell Sort
+// sort.quickSort(array);
+// console.log(array);
