@@ -6,7 +6,7 @@
 */
 
 // Imports
-import * as arraysSort from './ordenar_array.js'
+import * as sort from './ordenar_array.js'
 
 // Functions
 function creatArray() {
@@ -14,28 +14,36 @@ function creatArray() {
 
     // Captar o Tamanho do Array
     const arraySize = prompt('Tamanho do Array: ');
-    console.log('Tamanhao: ' + arraySize);
 
     // Criar um Array do tamanho que foi pedido
     const array = new Array(parseInt(arraySize));
 
     // Preencher esse array com numero randons
     for (let i = 0; i < parseInt(arraySize); i++) {
-        array[i] = Math.floor(Math.random() * 100);
+        array[i] = Math.floor(Math.random() * 100000001);
     }
     
-    array.push(3);
     // Retornar o array para ele ser usado em outras funções
     return array;
 }
 
-// Program
+// Criar array
+const array = creatArray();
 
-// 1° Criar o array (preenchico)
-// 2° Ordenar
+// Ordenar
 
 // Ordenar por Bubble Sort
-arraysSort.bubbleSort(creatArray());
+// sort.bubbleSort(array);
+// console.log(array);
 
 // Ordenar por Insetion Sort
-arraysSort.insertionSort(creatArray());
+// sort.insertionSort(array);
+// console.log(array);
+
+// Ordenar por Selection Sort
+// sort.SelectionSort(array);
+// console.log(array);
+
+// Ordenar por  Merge Sort
+sort.mergeSort(array, 0, array.length - 1);
+console.log(array);
