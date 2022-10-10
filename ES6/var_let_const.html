@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Var & Let & Const</title>
+
+    <script>
+
+        // window(globa), function, bloco
+        // var sofre hoisting, exclusivamente, dentro de escopo de bloco (sope na hierarquia)
+        // let preserva o escopo em que foi criado (sem hoisting)
+
+
+        function x() {
+
+            console.log("Function: " + serie)
+
+            if (true) {
+                console.log("Block inside function " + serie)
+            }
+        }
+
+
+        if (true) {
+            var serie = "The Walking Dead"
+            x();
+            console.log("Block: " + serie)
+        }
+
+        console.log("Global: " + serie)
+
+        // CONST - ñ sofre mudança de valor (ñ incluido mutações), necessita de atribuir valor no momento da declaração
+        // let serie
+        // const SERIE = algum valor; boa pratica nomear somente com maiuscula
+        const SERIE = "Friends"
+
+        function y() {
+            console.log("Const - Function: " + SERIE)
+
+            if (true) {
+                // Ñ sofre hoisting
+                const SERIE = "GOT"
+                console.log("Const - Block inside function: " + serie)
+            }
+        }
+        y();
+        console.log("Const - Global: " + SERIE)
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

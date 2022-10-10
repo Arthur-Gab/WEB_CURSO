@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+
+    <script>
+
+        /* let square = function(x = 0) {
+            return x * x
+        } */
+
+        // Igual a expressão acima
+        /* let square = (x = 0) => {
+            return x * x
+        } */
+
+        let square = x => x * x // return implícito
+
+        // caso seja só 1 parametro n é necessario parentese, caso contrário é
+        // caso n esteja recebendo nenhum parametro é necessário o parentese vazio
+        // let square = x => {... return valor}
+        // let square = x => x * x - ñ necessário indicar o return
+        // let square = () => {... return valor}
+
+        document.writeln(`${square(5)}`)
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
