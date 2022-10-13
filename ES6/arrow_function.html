@@ -26,7 +26,11 @@
         // let square = x => x * x - ñ necessário indicar o return
         // let square = () => {... return valor}
 
-        document.writeln(`${square(5)}`)
+        let evenOrOdd = num => num % 2 === 0 ? "Even" : "Odd" // return implícito
+
+        document.writeln(`${square(5)} <br>`)
+
+        document.writeln(`${evenOrOdd(10)}`)
 
     </script>
 </head>

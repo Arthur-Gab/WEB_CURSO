@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OO - Abstração</title>
+
+    <script>
+
+        // Modelo da entidade = Classe
+        class ContaBancaria {
+
+            //agencia, numeroConta, saldo, limite
+            constructor() {
+                this.agencia = 1000;
+                this.numeroConta = 12345;
+                this.saldo = 2000.00;
+                this.limite = 5000.00;
+            }
+            
+            //depostiar, sacar, consultar saldo
+            depositar(valor) {
+                this.saldo += valor;
+            }
+
+            sacar(valor) {
+                this.saldo -= valor;
+            }
+
+            getSaldo() {
+                return this.saldo;
+            }     
+            
+            getContaBancaria() {
+                return `Agência: ${this.agencia} | Numero da Conta: ${this.numeroConta}`;
+            }
+            
+            
+        }
+
+        // Entida = Obj
+        let acc = new ContaBancaria();
+
+        console.log(`Default: ${acc.getSaldo()}`);
+        acc.depositar(5000);
+        console.log(`Após Deposito (5000): ${acc.getSaldo()}`);
+        acc.sacar(2000);
+        console.log(`Após Saque (2000): ${acc.getSaldo()}`);
+
+
+
+    </script>
+</head>
+
+<body>
+    
+</body>
+
+</html>
