@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcenária</title>
+
+    <script>
+        // Um software de marcenaria
+        // Cadeira e Sofá
+
+        // Paradigma Procedural (falta encapsulamento)
+        const CHAIRS = Array()
+
+        CHAIRS[0] = Array()
+        CHAIRS[0]['qt_legs'] = 4;
+        CHAIRS[0]['canSpin'] = false;
+        CHAIRS[0]['color'] = "azul"
+
+        CHAIRS[1] = Array()
+        CHAIRS[1]['qt_legs'] = 1;
+        CHAIRS[1]['canSpin'] = true;
+        CHAIRS[1]['color'] = "red"
+
+        function addChair(array, qt_legs = 4, canSpin = false, color = "blue") {
+
+            if (Array.isArray(array)) {
+
+                const CHAIRS = Array()
+
+                CHAIRS['qt_legs'] = qt_legs;
+                CHAIRS['canSpin'] = canSpin;
+                CHAIRS['color'] = color;
+
+                array.push(CHAIRS);
+
+                console.log('Sucess!!!')
+            } else {
+                console.log('Insira um valor valído!!')
+            }
+        }
+
+        function canarraypin(array, index) {
+            if (array[index]['canSpin'] === true) {
+                console.log(`Spinned`)
+            } else {
+                console.log(`not spinned`)
+            }
+        }
+
+
+
+        // Paradigma OO
+        class Chair {
+
+            constructor(qtLegs = null, boolean = null, color = null) {
+                this.qtLegs = qtLegs;
+                this.canSpin = boolean;
+                this.color = color;
+            }
+
+            getQtLegs() {
+                // number
+                return qtLegs;
+            }
+
+            getCanSpin() {
+                // bolean
+                return canSpin;
+            }
+
+            getColor() {
+                // string
+                return color;
+            }
+
+            setQtLegs(qt) {
+                // Numeros Inteiros
+                if (Number.isInteger(qt))
+                    this.qtLegs = qt;
+
+                else console.log("Insira um numero inteiro!!!")
+            }
+
+            setSpin(boolean) {
+                // True or False
+                if (boolean === true || boolean === false)
+                    this.canSpin = boolean
+
+                else console.log("Insira um valor booleano!!!")
+            }
+
+            setColor(color) {
+                // Cor Hexadecimal
+                /* 1 . Deve começar com o símbolo '#'.
+                   2 . Deve ser seguido pelas letras de af, AF e / ou dígitos de 0 - 9.
+                   3 . O comprimento do código de cor hexadecimal deve ser 6 ou 3, excluindo o símbolo '#'. */
+                if (color.charAt(0) == '#') {
+
+                    const subColor = color.substring(1).toLowerCase();
+
+                    if (subColor.length == 3 || subColor.length == 6) {
+
+                        // Validar a-f && 0-9
+                        let i = 0
+                        for (i; (subColor.charAt(i).match(new RegExpColor("[a-f]")) || subColor.charAt(i).match(new RegExpColor("[0-9]"))) && i < subColor.length; i++)
+                            console.log(`Sucesso em ${subColor.charAt(i)}`)
+
+                        // Tratar Erros e atribuir valor a cor
+                        if (i < 3)
+                            console.log(`Digite uma cor em Hexadecimal`)
+                        else if (i < 6)
+                            console.log(`Digite uma cor em Hexadecimal`)
+                        else
+                            this.color = color;
+
+                    } else { console.log("Digite uma cor em Hexadecimal") }
+                }
+
+            }
+
+            chairCanSpin(chair) {
+                //
+            }
+        }
+
+        class RegExpColor extends RegExp {
+            [Symbol.match](str) {
+                const result = RegExp.prototype[Symbol.match].call(this, str);
+                if (result) {
+                    return true;
+                }
+                return false;
+            }
+        }
+
+        const chair = new Chair();
+
+        chair.setColor("#F0F0F0")
+
+        console.log(chair)
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
