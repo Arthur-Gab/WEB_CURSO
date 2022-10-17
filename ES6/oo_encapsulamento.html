@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulamento</title>
+
+    <script>
+
+        class Tv {
+
+            constructor() {
+                this._canais = Array(5, 7, 9, 12);
+                this._canalAtivo = 12;
+                this._volume = 5;
+            }
+
+            get canalAtivo() {
+                return this._canalAtivo;
+            }
+
+            set canalAtivo(canal) {
+                if (this._canais.indexOf(canal) !== -1) {
+                    this._canalAtivo = canal;
+                }
+            }
+
+        }
+
+        const tv = new Tv();
+        
+        console.log(`Get Canal Ativo: ${tv.canalAtivo}`);
+        tv.canalAtivo = 7;
+        console.log(`Get Canal Ativo: ${tv.canalAtivo}`);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
