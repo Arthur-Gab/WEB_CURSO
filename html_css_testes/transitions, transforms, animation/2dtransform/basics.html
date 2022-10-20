@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Transoform</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 1.5em;
+        }
+
+        div {
+            width: 250px;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+            background-color: cadetblue;
+            transition: all 1s;
+            cursor: pointer;
+        }
+
+        .scale:hover {
+            /* 1 default */
+            transform: scale(1.2);
+        }
+
+        .transform:hover {
+            transform: translate(40vw);
+        }
+
+        .rotate:hover {
+            /*  deg */
+            transform: rotate(.5turn);
+        }
+
+        .skew:hover {
+            /* deg */
+            transform: skew(40deg);
+        }
+
+        .origin:hover {
+            transform: rotate(180deg);
+            /* top, bottom, left, right */
+            /* top right, bottom right, etc */
+            /* transform-origin: left; */
+            transform-origin: bottom left;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="scale">scale me</div>
+    <div class="transform">transform me</div>
+    <div class="rotate">rotate me</div>
+    <div class="skew">skew me</div>
+    <div class="origin">transform origin</div>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+
+        button {
+            font-family: Helvetica;
+            font-size: 1em;
+            width: 150px;
+            height: 40px;
+            background-color: red;
+            border: none;
+            border-radius: 20px;
+            color: #FFF;
+            transition: transform background-color;
+            transition-duration: 3s;
+        }
+
+        .move:hover {
+            transform: translateX(900px);
+            background-color: rgb(57, 57, 99);
+        }
+
+        #ease {
+            transition-timing-function: ease;
+        }
+
+        #linear {
+            transition-timing-function: linear;
+        }
+
+        #ease-in {
+            transition-timing-function: ease-in;
+        }
+
+        #ease-out {
+            transition-timing-function: ease-out;
+        }
+
+        #ease-in-out {
+            transition-timing-function: ease-in-out;
+        }
+
+    </style>
+</head>
+
+<body>
+    <button id="ease" class="move">ease</button>
+    <button id="linear" class="move">linear</button>
+    <button id="ease-in" class="move">ease-in</button>
+    <button id="ease-out" class="move">ease-out</button>
+    <button id="ease-in-out" class="move">ease-in-out</button>
+</body>
+
+</html>

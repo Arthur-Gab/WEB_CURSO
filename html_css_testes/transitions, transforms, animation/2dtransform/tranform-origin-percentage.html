@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Origin Percent</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 1.5em;
+        }
+
+        div {
+            width: 250px;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+            background-color: cadetblue;
+            transition: all 1.5s;
+            transform-origin: 30% 80%;
+            cursor: pointer;
+        }
+
+        div:hover {
+            /* origin 30% 80% */
+            transform: rotate(60deg);
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div>Hover me</div>
+</body>
+
+</html>
