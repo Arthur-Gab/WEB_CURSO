@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rotating Button Effect</title>
+    <title>Swipe Button Effect</title>
 
     <style>
         *,
@@ -23,17 +23,19 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            background-color: #f2f2f2;
         }
 
         a {
             text-decoration: none;
-            color: #272727;
+            color: #351435;
             font-family: sans-serif;
             font-size: 2.625rem;
             line-height: 48px;
-            border: 5px solid #272727;
+            border: 5px solid #351435;
             padding: 40px 80px;
             position: relative;
+            transition: all .5s;
             overflow: hidden;
         }
 
@@ -42,17 +44,20 @@
             position: absolute;
             left: 0;
             top: 0;
-            background-color: #fff200;
+            background-color: #351435;
             height: 100%;
             width: 100%;
             z-index: -1;
-            transform-origin: top left;
-            transform: rotate(-90deg);
-            transition: transform .3s ease-out;
+            transform: translateX(-100%);
+            transition: all .5s;
         }
 
         a:hover::before {
-            transform: rotate(0);
+            transform: translateX(0%);
+        }
+
+        a:hover {
+            color: #fff;
         }
     </style>
 </head>

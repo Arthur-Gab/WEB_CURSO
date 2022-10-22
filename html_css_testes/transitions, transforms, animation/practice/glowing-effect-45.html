@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rotating Button Effect</title>
+    <title>Glowin Effect 45°</title>
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
         *,
         *::before,
         *::after {
@@ -16,6 +18,7 @@
             box-sizing: border-box;
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
+            font-family: 'roboto';
         }
 
         body {
@@ -23,37 +26,44 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            background-color: #1e1e1e;
         }
 
         a {
-            text-decoration: none;
-            color: #272727;
-            font-family: sans-serif;
             font-size: 2.625rem;
+            font-weight: 300;
             line-height: 48px;
-            border: 5px solid #272727;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: -2px;
             padding: 40px 80px;
+            color: #f2f2f2;
+            border: 3px solid #f2f2f2;
             position: relative;
+            transition: all .7s;
             overflow: hidden;
+        }
+
+        a:hover {
+            background-color: #ff5757;
         }
 
         a::before {
             content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            background-color: #fff200;
-            height: 100%;
+            background-color: #f2f2f2;
             width: 100%;
-            z-index: -1;
-            transform-origin: top left;
-            transform: rotate(-90deg);
-            transition: transform .3s ease-out;
+            height: 50px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(-100%) rotate(45deg);
+            transition: all .7s;
         }
 
         a:hover::before {
-            transform: rotate(0);
+            transform: translateX(100%) rotate(45deg);
         }
+
     </style>
 </head>
 
