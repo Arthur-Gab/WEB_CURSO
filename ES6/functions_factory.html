@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos literais</title>
+</head>
+
+<body>
+
+    <h1 id="demo"></h1>
+    <p>See the console</p>
+
+    <script>
+        const carFactory = function (brand, model, color) {
+            return {
+                brand,
+                model,
+                color,
+                show() {
+                    return `${this.brand} ${this.model}, was colored with ${this.color}`
+                }
+            }
+        }
+
+        const myCar = carFactory("BMW", "Mini Coupe", "Blue");
+        console.log(myCar);
+
+        const text = document.querySelector("#demo");
+        text.innerHTML = myCar.show();
+    </script>
+</body>
+
+</html>
