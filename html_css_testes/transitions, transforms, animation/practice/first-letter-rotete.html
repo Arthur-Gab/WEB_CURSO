@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Letter Rotate</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            font-family: 'roboto';
+        }
+
+        body {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        button {
+            border: none;
+            padding: 20px 60px;
+            font-size: 1.525rem;
+            background-color: initial;
+            color: #262626;
+            border: 2px solid #262626;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            transition: all .3s;
+        }
+
+        button:hover {
+            color: #fff;
+        }
+
+        button::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 110%;
+            top: 0;
+            left: 0;
+            background-color: #262626;
+            opacity: 0;
+            z-index: -1;
+            transition: all .3s;
+        }
+
+        button:hover::before {
+            opacity: 1;
+            transform: rotate(15deg);
+        }
+
+        button span {
+            color: transparent;
+            position: relative;
+        }
+
+        button span::before {
+            position: absolute;
+            content: 'B';
+            color: #262626;
+            transition: all .3s
+        }
+
+        button:hover span::before {
+            transform: rotate(360deg) scale(2.5) translate(-5px);
+            color: #fff;
+        }
+
+    </style>
+</head>
+
+<body>
+    <button><span>B</span>utton</button>
+</body>
+
+</html>

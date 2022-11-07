@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Parts</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            font-family: 'roboto';
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1e1e1e;
+        }
+
+        a {
+            font-size: 1.625rem;
+            padding: 25px 60px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #f6b93b;
+            border: 3px solid #f6b93b;
+            position: relative;
+            transition: all .5s;
+            overflow: hidden;
+        }
+
+        a::before,
+        a::after,
+        span::before,
+        span::after {
+            content: '';
+            position: absolute;
+            width: 25%;
+            height: 100%;
+            background-color: #f6b93b;
+            z-index: -1;
+            transition: all .5s
+        }
+
+        a::before {
+            top: 0;
+            left: -25%;
+        }
+
+        a:hover::before {
+            left: 0;
+        }
+
+        a::after {
+            top: -100%;
+            left: 25%;
+        }
+
+        a:hover::after {
+            top: 0;
+        }
+
+        span::before {
+            top: 0;
+            left: 100%;
+        }
+
+        a:hover span::before {
+            left: 75%;
+        }
+
+        span::after {
+            top: 100%;
+            left: 50%;
+        }
+
+        a:hover span::after {
+            top: 0;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">Button <span></span></a>
+</body>
+
+</html>

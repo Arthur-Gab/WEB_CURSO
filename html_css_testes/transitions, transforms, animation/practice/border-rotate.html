@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Rotate</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            font-family: 'roboto';
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1e1e1e;
+        }
+
+        a {
+            width: 250px;
+            height: 80px;
+            display: grid;
+            place-items: center;
+            font-size: 1.625rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #fff;
+            position: relative;
+        }
+
+        a::before,
+        a::after {
+            content: '';
+            position: absolute;
+            transition: all 1s;
+        }
+
+        a::before {
+            /* left/right */
+            height: 110px;
+            width: 100%;
+            border-left: 2px solid #d10000;
+            border-right: 2px solid  #fdc518;
+        }
+
+        a:hover::before {
+            transform: rotateY(180deg);
+        }
+
+        a::after {
+            /* top/bottom */
+            height: 100%;
+            width: 280px;
+            border-top: 2px solid #d10000;
+            border-bottom: 2px solid #fdc518;
+        }   
+        
+        a:hover::after {
+            transform: rotateX(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">Button</a>
+</body>
+
+</html>

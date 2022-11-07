@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herança</title>
+
+    <script>
+
+        class Car {
+            constructor(brand) {
+                this.carName = brand.toLocaleUpperCase();
+            }
+
+            present() {
+                return "I've a " + this.carName;
+            }
+        }
+
+        class Model extends Car {
+            constructor(brand, mod) {
+                super(brand);
+                this.model = mod.toLocaleUpperCase();
+            }
+
+            show() {
+                return this.present() + ", it's a " + this.model;
+            }
+        }
+
+        let myCar = new Model("Mercedes-Benz", "S680");
+        console.log(myCar.show());
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Layers Effect</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            font-family: 'roboto';
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1e1e1e;
+        }
+
+        a {
+            font-size: 2.625rem;
+            font-weight: 400;
+            line-height: 48px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 40px 80px;
+            color: #f2f2f2;
+            background-color: #f1c40f;
+            position: relative;
+            /* transition: all 2s;     */
+            /* border: 3px solid #f84526;       */
+            /* overflow: hidden;   */
+        }
+
+        a::before {
+            content: 'BUTTON';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #2ce771;
+            display: grid;
+            place-items: center;
+            transform-origin: top;
+            transform: rotateX(270deg);
+            transition: all .5s;
+        }
+
+        a::after {
+            content: 'BUTTON';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: red;
+            display: grid;
+            place-items: center;
+            transform-origin: bottom;
+            transform: rotateX(270deg);
+            transition: all .5s;
+            transition-delay: .15s;
+        }
+
+        a:hover::before,
+        a:hover::after {
+            transform: rotateX(0deg);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">Button</a>
+</body>
+
+</html>
