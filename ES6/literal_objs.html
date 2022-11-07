@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos literais</title>
+</head>
+
+<body>
+
+    <h1 id="demo"></h1>
+    <p>See the console</p>
+    
+    <script>
+        // Form
+        let name = "Arthur"; //document.querySelector("#name-form");
+        let age = 19; //document.querySelector("#age-form");
+        let genre = "M"; //document.querySelector("#genre-form");
+        let profession = "Programador"; //document.querySelector("#profession-form");
+
+        const Person = {
+            name,
+            age,
+            genre,
+            profession,
+            show() {
+                return `${this.name} of ${this.age} years old, genre ${this.genre}, is a ${this.profession}`;
+            }
+        }
+
+        let text = document.querySelector("#demo");
+        text.innerHTML = Person.show();
+
+        Person.name = "Arthur Gabriel";
+        console.log(Person);
+
+        Person.hi = () => `Hi, I'm ${Person.name}.`;
+        console.log(Person.hi());
+        console.log(Person);
+    </script>
+</body>
+
+</html>
