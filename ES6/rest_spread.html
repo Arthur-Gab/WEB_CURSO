@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest & Spread</title>
+</head>
+
+<body>
+    <h1 id="demo"></h1>
+    <h2>Utilizando Rest & Spread pra somar</h2>
+    <script>
+        // Spread
+        let string = "Operando como Spread"
+        console.log(...string);
+        console.log([...string]);
+
+        // Rest
+        function soma(...numbers) {
+            console.log(numbers)
+            let result = 0;
+            numbers.forEach(value => result += value);
+            return result;
+        }
+
+        const text = document.querySelector("#demo");
+        text.innerHTML = `Soma = ${soma(3,5,8,2,1)}`;
+    </script>
+</body>
+
+</html>
