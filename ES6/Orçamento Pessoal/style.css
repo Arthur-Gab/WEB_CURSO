@@ -35,7 +35,7 @@ body {
 header {
     background-color: var(--bg-dark);
     color: #fff;
-    height: 8vh;
+    height: 64px;
     display: flex;
     align-items: center;
     position: fixed;
@@ -175,13 +175,27 @@ h1 {
     letter-spacing: 2.5px;
 }
 
+.modal.active {
+    display: block;
+}
+
+.modal-dialog {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modal-title {
+    letter-spacing: 2.5px;
+    font-size: 1.5rem;
+}
+
 .row {
     margin-bottom: 1rem;
 }
 
 .input {
-   border: 1px solid #1e1e1e;
-   color: #000;
+    border: 1px solid #1e1e1e;
+    color: #000;
 }
 
 .input:focus {
@@ -203,10 +217,11 @@ h1 {
     margin: 0 auto;
     background-color: var(--purple);
     fill: var(--bg-dark);
-    transition: all .5s; 
+    transition: all .5s;
+    font-weight: 500;
 }
 
-.btn > svg {
+.btn>svg {
     display: block;
     margin: auto;
     width: 24px;
@@ -222,6 +237,7 @@ h1 {
 .btn:hover {
     background-color: var(--bg-dark);
     fill: var(--bg-white);
+    color: var(--bg-white);
 }
 
 @media(max-width: 400px) {
@@ -233,4 +249,3 @@ h1 {
 #consult-expenses {
     padding-top: .25rem;
 }
-

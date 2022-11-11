@@ -12,7 +12,8 @@
   <link rel="stylesheet" href="style.css">
 
   <script src="./mobile-navbar.js" defer></script>
-  <script src="./app.js" defer></script>
+  <script type="module"  src="./app.js" defer></script>
+  <script type="module" src="./modal.js" defer></script>
 </head>
 
 <body>
@@ -47,6 +48,26 @@
 
   <main>
     <div class="container">
+
+      <section>
+        <div class="modal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title">Insira valores válidos</h2>
+                <button type="button" class="btn-close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Verifique se preencheu todos os campos corretamente.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-txt-close">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section>
         <h1>Adicionar Despesas</h1>
 
@@ -128,7 +149,7 @@
         </div>
 
       </section>
-     
+
     </div>
   </main>
 </body>

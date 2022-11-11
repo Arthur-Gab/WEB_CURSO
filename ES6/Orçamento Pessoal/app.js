@@ -1,26 +1,29 @@
+import {Modal} from './modal.js';
+
 class UserCreatOrFinderExpense {
     constructor(register, finder) {
         this.register = document.querySelector(register);
         this.finder = document.querySelector(finder);
-        this.expense = null;
+        this.Expense = null;
+        this.Storage = null;
     }
 
-    addEventClicker() {
-        // Put click events here
-        if ((location.pathname == "/index.html")) {
-            this.register.addEventListener("click",
-                this.registerExpense);
-        }
-        if ((location.pathname == "/confer.html")) {
-            this.finder.addEventListener("click",
-                this.finderExpense);
-        }
+    addEventClickerIndex() {
+        // Put click events for Index.html here
+        this.register.addEventListener("click",
+            this.registerExpense);
+    }
+
+    addEventClickerConfer() {
+        // Put click events for Confer.html here
+        this.finder.addEventListener("click",
+            this.finderExpense);
     }
 
     registerExpense() {
         // Register Expenses
         // It is not allowed to create expense with empty values
-        this.expense = new Expense(
+        this.Expense = new Expense(
             "#day",
             "#month",
             "#year",
@@ -29,14 +32,25 @@ class UserCreatOrFinderExpense {
             "#cost"
         );
 
-        if (this.expense.validate()) {
+        this.Storage = new Storage(this.Expense);
+
+        // Validation of values
+        if (this.Expense.validate()) {
+
+            // Valores validos
             console.log("Validado")
-            localStorage.setItem("Despesa", JSON.stringify(this.expense));
+            this.Storage.recordExpense();
         } else {
-            console.log("Informe valores Válidos")
+
+            const MODAL = new Modal(
+                ".modal",
+                ".btn-close",
+                ".btn-txt-close"
+            );
+            MODAL.init();
         }
 
-        
+
     }
 
     finderExpense() {
@@ -44,7 +58,10 @@ class UserCreatOrFinderExpense {
     }
 
     init() {
-        this.addEventClicker();
+        if (this.register)
+            this.addEventClickerIndex();
+        if (this.finder)
+            this.addEventClickerConfer();
     }
 }
 
@@ -59,31 +76,32 @@ class Expense {
     }
 
     validate() {
-        if (this.day == "" || isNaN(this.day))
-            return false
-        if (this.month == "")
-            return false
-        if (this.year == "")
-            return false
-        if (this.type == "")
-            return false
-        if (this.description == "")
-            return false
-        if (this.cost == "" || isNaN(this.cost))
+        if (this.day == "" || isNaN(this.day) || this.month == "" || this.year == "" || this.type == "" || this.description == "" || this.cost == "" || isNaN(this.cost))
             return false
 
         return true
     }
+}
 
-    show() {
-        console.log(this.day, this.month, this.year, this.type, this.description, this.cost);
+class Storage {
+    constructor(Expense) {
+        this.Expense = Expense;
+    }
+
+    recordExpense() {
+        // Record Expenses in Local Storage;
+        localStorage.setItem(this.getIndex(), JSON.stringify(this.Expense));
+    }
+
+    getIndex() {
+        return localStorage.length + 1;
     }
 }
 
-const user = new UserCreatOrFinderExpense(
+const USER = new UserCreatOrFinderExpense(
     "#confirm-cost",
     "#finder-cost"
 );
 
-user.init();
+USER.init();
 

@@ -1,5 +1,5 @@
 class MobileMenu {
-    constructor(menu,list, links) {
+    constructor(menu, list, links) {
         this.menu = document.querySelector(menu);
         this.navList = document.querySelector(list);
         this.navLinks = document.querySelector(links);
@@ -7,16 +7,16 @@ class MobileMenu {
     }
 
     addEventClick() {
-        this.menu.addEventListener("click", 
-        () => {
-            this.menu.classList.toggle(this.activeClass);
-            this.navList.classList.toggle(this.activeClass);
-        });
-        
+        this.menu.addEventListener("click",
+            () => {
+                this.menu.classList.toggle(this.activeClass);
+                this.navList.classList.toggle(this.activeClass);
+            });
+
     }
 
     init() {
-        if(this.mobileMenu)
+        if (this)
             this.addEventClick();
     }
 }
@@ -26,4 +26,6 @@ const menu = new MobileMenu(
     ".nav-list",
     ".nav-list li"
 );
-menu.addEventClick();
+menu.init();
+
+
