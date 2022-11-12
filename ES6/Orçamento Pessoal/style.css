@@ -175,8 +175,22 @@ h1 {
     letter-spacing: 2.5px;
 }
 
+p::selection,
+h1::selection,
+h2::selection {
+    color: #fff;
+    background-color: var(--purple);
+}
+
 .modal.active {
     display: block;
+}
+
+.modal.active .modal-dialog,
+.btn-close:hover {
+    border: 1px solid var(--purple);
+    border-radius: 10px;
+    box-shadow: 0 0 2px var(--purple);
 }
 
 .modal-dialog {

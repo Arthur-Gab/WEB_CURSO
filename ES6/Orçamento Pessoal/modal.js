@@ -8,15 +8,15 @@ export class Modal {
 
     addEventClick() {
         this.closeX.addEventListener("click", () => {
-            this.modal.classList.toggle(this.active);
+            this.modal.classList.remove(this.active);
         });
         this.closeBtn.addEventListener("click", () => {
-            this.modal.classList.toggle(this.active);
+            this.modal.classList.remove(this.active);
         });
     }
 
     display() {
-        this.modal.classList.toggle(this.active);
+        this.modal.classList.add(this.active);
     }
 
     init() {

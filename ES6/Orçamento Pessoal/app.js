@@ -32,16 +32,15 @@ class UserCreatOrFinderExpense {
             "#cost"
         );
 
-        this.Storage = new Storage(this.Expense);
-
         // Validation of values
         if (this.Expense.validate()) {
 
-            // Valores validos
-            console.log("Validado")
+            // Valores validos - grava no Local Storage a Expense
+            this.Storage = new Storage(this.Expense);
             this.Storage.recordExpense();
         } else {
 
+            // Valores Invalidos - Aparece um Modal centralizado
             const MODAL = new Modal(
                 ".modal",
                 ".btn-close",
@@ -76,7 +75,7 @@ class Expense {
     }
 
     validate() {
-        if (this.day == "" || isNaN(this.day) || this.month == "" || this.year == "" || this.type == "" || this.description == "" || this.cost == "" || isNaN(this.cost))
+        if (this.day === "" || isNaN(this.day) || this.month === "" || this.year === "" || this.type === "" || this.description === "" || this.cost === "" || isNaN(this.cost))
             return false
 
         return true
