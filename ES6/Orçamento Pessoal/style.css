@@ -35,7 +35,7 @@ body {
 header {
     background-color: var(--bg-dark);
     color: #fff;
-    height: 64px;
+    height: 65px;
     display: flex;
     align-items: center;
     position: fixed;
@@ -184,9 +184,9 @@ h2::selection {
 
 .modal.active {
     display: block;
+    backdrop-filter: brightness(.6);
 }
 
-.modal.active .modal-dialog,
 .btn-close:hover {
     border: 1px solid var(--purple);
     border-radius: 10px;
