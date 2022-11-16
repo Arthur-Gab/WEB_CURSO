@@ -29,6 +29,24 @@ body {
     line-height: 24px;
 }
 
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--purple);
+    transition: all .3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #9000ee;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #d9d9d9;
+}
+
+
 /* Header
 -----------------------------------------------------
 ----------------------------------------------------- */
@@ -39,6 +57,7 @@ header {
     display: flex;
     align-items: center;
     position: fixed;
+    top: 0;
     width: 100vw;
 }
 
@@ -145,7 +164,7 @@ li>a:hover {
         background-color: var(--bg-dark);
         border-top: 1px solid var(--purple);
         position: absolute;
-        top: 8vh;
+        top: 65px;
         right: 0;
         height: 92vh;
         width: 50vw;
@@ -165,8 +184,8 @@ li>a:hover {
 -----------------------------------------------------
 ----------------------------------------------------- */
 main {
-    height: 92vh;
-    padding-top: 8vh;
+    height: 100%;
+    margin-top: 65px;
 }
 
 h1 {
@@ -201,6 +220,7 @@ h2::selection {
 .modal-title {
     letter-spacing: 2.5px;
     font-size: 1.5rem;
+    color: #9000ee;
 }
 
 .row {
