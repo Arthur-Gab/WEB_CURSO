@@ -8,25 +8,27 @@ export class Storage {
 
     recordExpense() {
         // Record Expenses in Local Storage as a Obj Literal;
-        console.log(this.getIndex());
         localStorage.setItem(this.getIndex(), JSON.stringify(this.toObjLiteral()));
     }
 
     filterExpense() {
+        // Filter the expenses or expense compatible with the expenses in localStorage and display that
 
-        // Creating an array of literal obj  filled with all expenses in localStorage
+        // Creating an array of literal obj  filled with all expenses in localStorage compatible with filtes
         let expenses = Array();
 
-        for (let i = 1; expenses.length < localStorage.length; i++) {
+        for (let i = 0; i < localStorage.length; i++) {
 
-            let expense = JSON.parse(localStorage.getItem(i));
+            if (localStorage.getItem(localStorage.key(i)) === JSON.stringify(this.toObjLiteral())) {
 
-            if (expense === null)
-                continue;
+                let expense = JSON.parse(localStorage.getItem(localStorage.key(i)));
+                expenses.push(expense);
+            } else {
 
-            expenses.push(expense);
+                console.log(false);
+            }
+
         }
-
         // // <tr>
         // //     <td id="table-date">12/03/2020</td>
         // //     <td id="table-type">Education</td>
