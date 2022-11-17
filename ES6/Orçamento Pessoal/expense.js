@@ -19,12 +19,12 @@ export class Expense {
 
         // retornar o obj a ser focado
         let error = null;
-        if (this.day.value === "" || isNaN(this.day.value))
-            error = this.day;
+        if (this.year.value === "")
+            error = this.year;
         else if (this.month.value === "")
             error = this.month;
-        else if (this.year.value === "")
-            error = this.year;
+        else if (this.day.value === "" || isNaN(this.day.value))
+            error = this.day;
         else if (this.type.value === "")
             error = this.type;
         else if (this.description.value === "")
@@ -42,26 +42,5 @@ export class Expense {
         this.type.value = "";
         this.description.value = "";
         this.cost.value = "";
-    }
-
-    toObjLiteral() {
-        // Return the values of the Expense for recording in the localStorage
-        const day = this.day.value;
-        const month = this.month.value;
-        const year = this.year.value;
-        const type = this.type.value;
-        const description = this.description.value;
-        const cost = this.cost.value;
-
-        const pseudoExpense = {
-            day,
-            month,
-            year,
-            type,
-            description,
-            cost
-        }
-
-        return pseudoExpense;
     }
 }

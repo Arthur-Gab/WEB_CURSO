@@ -8,31 +8,24 @@ export class Storage {
 
     recordExpense() {
         // Record Expenses in Local Storage as a Obj Literal;
-        localStorage.setItem(this.getIndex(), JSON.stringify(this.Expense));
-        console.log(this.Expense);
+        console.log(this.getIndex());
+        localStorage.setItem(this.getIndex(), JSON.stringify(this.toObjLiteral()));
     }
 
     filterExpense() {
-        
-        // Get the values of the inputs and search in local storage for an Expense compatible
-        // it's necessary the input year is filled at least
-        // const day = this.Expense.day.value;
-        // const month = this.Expense.month.value;
-        // const year = this.Expense.year.value;
-        // const type = this.Expense.type.value;
-        // const description = this.Expense.description.value;
-        // const cost = this.Expense.cost.value;
-        // let expenses = Array();
 
-        // for (let i = 1; expenses.length < localStorage.length; i++) {
+        // Creating an array of literal obj  filled with all expenses in localStorage
+        let expenses = Array();
 
-        //     let expense = JSON.parse(localStorage.getItem(i));
+        for (let i = 1; expenses.length < localStorage.length; i++) {
 
-        //     if (expense === null)
-        //         continue;
+            let expense = JSON.parse(localStorage.getItem(i));
 
-        //     expenses.push(expense);
-        // }
+            if (expense === null)
+                continue;
+
+            expenses.push(expense);
+        }
 
         // // <tr>
         // //     <td id="table-date">12/03/2020</td>
@@ -50,21 +43,42 @@ export class Storage {
         // //     </td>
         // // </tr>
 
-        // expenses.forEach((e) => {
-            
-        //     // Creating <tr>
-        //     let row = this.listOfExpenses.insertRow();
+        expenses.forEach((e) => {
 
-        //     // Creating <td>
-        //     row.insertCell(0).innerHTML = `${e.day}/${e.month}/${e.year}`;
-        //     row.insertCell(1).innerHTML = `${e.type}`;
-        //     row.insertCell(2).innerHTML = `${e.description}`;
-        //     row.insertCell(3).innerHTML = `R$ ${e.cost}`;
+            // Creating <tr>
+            let row = this.listOfExpenses.insertRow();
 
-        // })
+            // Creating <td>
+            row.insertCell(0).innerHTML = `${e.day}/${e.month}/${e.year}`;
+            row.insertCell(1).innerHTML = `${e.type}`;
+            row.insertCell(2).innerHTML = `${e.description}`;
+            row.insertCell(3).innerHTML = `R$ ${e.cost}`;
+
+        })
     }
 
     getIndex() {
         return localStorage.length + 1;
+    }
+
+    toObjLiteral() {
+        // Return the values of the Expense for recording in the localStorage
+        const day = this.Expense.day.value;
+        const month = this.Expense.month.value;
+        const year = this.Expense.year.value;
+        const type = this.Expense.type.value;
+        const description = this.Expense.description.value;
+        const cost = this.Expense.cost.value;
+
+        const pseudoExpense = {
+            day,
+            month,
+            year,
+            type,
+            description,
+            cost
+        }
+
+        return pseudoExpense;
     }
 }

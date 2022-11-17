@@ -14,7 +14,7 @@ class UserCreatOrFinderExpense {
             "#description",
             "#cost"
         );
-        this.Storage = null;
+        this.Storage = new Storage(this.Expense);
     }
 
     addEventClickerIndex() {
@@ -26,7 +26,6 @@ class UserCreatOrFinderExpense {
                 if (this.Expense.validate()) {
 
                     // Valores validos - grava no Local Storage a Expense
-                    this.Storage = new Storage(this.Expense.toObjLiteral());
                     this.Storage.recordExpense();
                     this.Expense.clearInput();
                 } else {
@@ -51,7 +50,6 @@ class UserCreatOrFinderExpense {
         this.finder.addEventListener("click",
             () => {
                 // Recuperar o valor dos inputs e retornar eles na table como uma despesa
-                this.Storage = new Storage(this.Expense);
                 this.Storage.filterExpense();
             });
     }
