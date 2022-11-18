@@ -9,10 +9,15 @@ export class Storage {
 
     recordExpense() {
         // Record Expenses in Local Storage as a Obj Literal;
-        localStorage.setItem(this.getIndex(), JSON.stringify(this.toObjLiteral(this.Expense)));
+        console.log(this.getIndex());
+        // localStorage.setItem(this.getIndex(), JSON.stringify(this.toObjLiteral(this.Expense)));
     }
 
     filterExpense() {
+
+
+
+
         // For this function i'm will recover the value of inputs filled and filter the expense i need in the expenses array
         // After, toggle the display of that expense in localStorage to active and display that in the HTML
         // The expense can't be displayed again if it is already being displayed (the display atribute is for assist that)
@@ -64,7 +69,45 @@ export class Storage {
     }
 
     getIndex() {
-        return localStorage.length + 1;
+        // Goal: Return the number that goes be used in the record of an Expense in Local Storage
+        // Loop through the Storage location and return a progressive index from 1 to infinity, 
+        // and deal with missing numbers, such as removing an expense
+
+        // 1° localStorage has none expenses registered
+        if (localStorage.length === 0) {
+            return 1
+        }
+
+        // 2° LocalStorage has any expense registered
+        // In this case it's possible the localStorage'keys isn't in sequence
+        // For that i need to return the number most lowest possible for the new expense registering
+
+        // Keys is an array that contains all keys from localStorage and returns me an available number
+        let keys = Array();
+
+        for (let i = localStorage.length - 1; i >= 0; i--) {
+            keys.push(localStorage.key(i));
+        }
+
+        keys.sort((a, b) => {
+            return a - b
+        });
+
+        console.log(keys)
+
+        // return the lowest numer key in localStorage for the new expense registering
+        for (let i = 0; i < keys.length; i++) {
+
+            // if has none expense in localStorage with key = 1
+            if (parseInt(keys[i]) === 2 && keys[i - 1] === undefined) {
+                return 1; 
+            }
+
+            // if has an expense in localStorage with key = 1, 
+            if (parseInt(keys[i]) + 1 !== parseInt(keys[i + 1])) {
+                return parseInt(keys[i]) + 1
+            }
+        }
     }
 
     toObjLiteral(Expense) {

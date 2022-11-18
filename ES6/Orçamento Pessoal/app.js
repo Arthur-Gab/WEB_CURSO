@@ -51,6 +51,8 @@ class UserCreatOrFinderExpense {
         // Filter Expenses on Local Storage and display that in the table body
         this.finder.addEventListener("click",
             () => {
+                // Update the Expenses arrya in the Storage with the localStorage
+                this.Storage.loadExpenses();
                 // Recuperar o valor dos inputs e retornar eles na table como uma despesa
                 this.Storage.filterExpense();
 
@@ -63,7 +65,6 @@ class UserCreatOrFinderExpense {
         if (this.register)
             this.addEventClickerIndex();
         if (this.finder)
-            this.Storage.loadExpenses();
             this.addEventClickerConfer();
     }
 }
