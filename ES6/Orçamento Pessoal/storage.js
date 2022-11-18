@@ -8,19 +8,62 @@ export class Storage {
     }
 
     recordExpense() {
-        // Record Expenses in Local Storage as a Obj Literal;
-        console.log(this.getIndex());
-        // localStorage.setItem(this.getIndex(), JSON.stringify(this.toObjLiteral(this.Expense)));
+        // Record Expenses in Local Storage as an Obj Literal;
+        localStorage.setItem(this.getIndex(), JSON.stringify(this.toObjLiteral(this.Expense)));
     }
 
     filterExpense() {
-
-
-
-
         // For this function i'm will recover the value of inputs filled and filter the expense i need in the expenses array
-        // After, toggle the display of that expense in localStorage to active and display that in the HTML
+        // After, toggle the display of that expense in localStorage to active i display that in the HTML
         // The expense can't be displayed again if it is already being displayed (the display atribute is for assist that)
+        console.log(this.expenses);
+
+        // 1° Step: Get the values wich the user want, can be how many values he want (SAVE THE INPUTS FILLED AS AN ARRAY)
+        const INPUTFILLEDS = this.getinputFilleds();
+        console.log(INPUTFILLEDS);
+
+        // 2° filter the expenses and get his keys in localStorage for later update the atribute display 
+        const KEYS = [];
+
+        for (let i = 0; i < localStorage.length; i++) {
+
+            let key = localStorage.key(i);
+            let expense = JSON.parse(localStorage.getItem(key));
+
+            // this let is to define the expense has aproved on all filter that was 
+            // if it's === INPUTFILLEDS.length is because it commend all the filters
+            // for and exemple i'm filled year and month, so filtered = 2 means some expense has these two values
+            let filtered = 0;
+
+            for (let j = 0; j < INPUTFILLEDS.length; j++) {
+
+                if (INPUTFILLEDS[j] === expense.day)
+                    filtered++;
+
+                if (INPUTFILLEDS[j] === expense.month)
+                    filtered++;
+
+                if (INPUTFILLEDS[j] === expense.year)
+                    filtered++;
+
+                if (INPUTFILLEDS[j] === expense.type)
+                    filtered++;
+
+                if (INPUTFILLEDS[j] === expense.description)
+                    filtered++;
+
+                if (INPUTFILLEDS[j] === expense.cost)
+                    filtered++;
+            }
+            
+            if (filtered === INPUTFILLEDS.length) {
+                console.log(key, expense)
+            }
+        }
+
+
+
+
 
         // <tr>
         //     <td id="table-date">12/03/2020</td>
@@ -54,6 +97,30 @@ export class Storage {
         // })
     }
 
+    getinputFilleds() {
+        const inputs = [];
+
+        if (this.Expense.day.value !== "")
+            inputs.push(this.Expense.day.value);
+
+        if (this.Expense.month.value !== "")
+            inputs.push(this.Expense.month.value);
+
+        if (this.Expense.year.value !== "")
+            inputs.push(this.Expense.year.value);
+
+        if (this.Expense.type.value !== "")
+            inputs.push(this.Expense.type.value);
+
+        if (this.Expense.description.value !== "")
+            inputs.push(this.Expense.description.value);
+
+        if (this.Expense.cost.value !== "")
+            inputs.push(this.Expense.cost.value);
+
+        return inputs;
+    }
+
     loadExpenses() {
         // Run on load of the page Confer
         // Creating an array of literal obj  filled with all expenses in localStorage compatible with
@@ -65,7 +132,6 @@ export class Storage {
             this.expenses.push(expense);
 
         }
-
     }
 
     getIndex() {
@@ -93,14 +159,12 @@ export class Storage {
             return a - b
         });
 
-        console.log(keys)
-
         // return the lowest numer key in localStorage for the new expense registering
         for (let i = 0; i < keys.length; i++) {
 
             // if has none expense in localStorage with key = 1
             if (parseInt(keys[i]) === 2 && keys[i - 1] === undefined) {
-                return 1; 
+                return 1;
             }
 
             // if has an expense in localStorage with key = 1, 
