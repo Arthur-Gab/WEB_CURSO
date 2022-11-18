@@ -6,10 +6,11 @@ export class Expense {
         this.type = document.querySelector(type);
         this.description = document.querySelector(description);
         this.cost = document.querySelector(cost);
+        this.display = "inactive"
     }
 
     validate() {
-        if (this.day.value === "" || isNaN(this.day.value) || this.month.value === "" || this.year.value === "" || this.type.value === "" || this.description.value === "" || this.cost.value === "" || isNaN(this.cost.value))
+        if (this.day.value === "" || isNaN(this.day.value) || 1 > this.day.value > 31 || this.month.value === "" || this.year.value === "" || this.type.value === "" || this.description.value === "" || this.cost.value === "" || isNaN(this.cost.value))
             return false
 
         return true

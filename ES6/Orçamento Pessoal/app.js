@@ -27,7 +27,9 @@ class UserCreatOrFinderExpense {
 
                     // Valores validos - grava no Local Storage a Expense
                     this.Storage.recordExpense();
-                    this.Expense.clearInput();
+
+                    // Clear inputs for new insertions of values
+                    // this.Expense.clearInput();
                 } else {
 
                     // Valores Invalidos - Aparece um Modal centralizado
@@ -51,6 +53,9 @@ class UserCreatOrFinderExpense {
             () => {
                 // Recuperar o valor dos inputs e retornar eles na table como uma despesa
                 this.Storage.filterExpense();
+
+                // Clear inputs for new insertions of values
+                // this.Expense.clearInput();
             });
     }
 
@@ -58,6 +63,7 @@ class UserCreatOrFinderExpense {
         if (this.register)
             this.addEventClickerIndex();
         if (this.finder)
+            this.Storage.loadExpenses();
             this.addEventClickerConfer();
     }
 }
