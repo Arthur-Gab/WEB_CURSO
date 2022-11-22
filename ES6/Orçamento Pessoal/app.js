@@ -54,7 +54,7 @@ class UserCreatOrFinderExpense {
                 // Update the Expenses arrya in the Storage with the localStorage
                 this.Storage.loadExpenses();
                 // Recuperar o valor dos inputs e retornar eles na table como uma despesa
-                this.Storage.filterExpense();
+                this.Storage.displayExpense(this.Storage.filterExpense());
 
                 // Clear inputs for new insertions of values
                 // this.Expense.clearInput();

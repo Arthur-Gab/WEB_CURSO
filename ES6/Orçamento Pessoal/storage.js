@@ -3,7 +3,7 @@ export class Storage {
         // For recording this.Expense is an objLiteral
         // For recording this.Expense is a class Expense
         this.Expense = Expense;
-        this.listOfExpenses = document.querySelector("#list-expenses");
+        this.expensesTable = document.querySelector("#list-expenses");
         this.expenses = null;
     }
 
@@ -13,18 +13,16 @@ export class Storage {
     }
 
     filterExpense() {
-        // For this function i'm will recover the value of inputs filled and filter the expense i need in the expenses array
-        // After, toggle the display of that expense in localStorage to active i display that in the HTML
-        // The expense can't be displayed again if it is already being displayed (the display atribute is for assist that)
-        console.log(this.expenses);
+        // This method has the purpose of returning the keys of the expenses filtered in localStorage to serve as a "tracker" 
+        // for modifying the display attribute by replacing the obj itself with a new identical one
 
         // 1° Step: Get the values wich the user want, can be how many values he want (SAVE THE INPUTS FILLED AS AN ARRAY)
         const INPUTFILLEDS = this.getinputFilleds();
-        console.log(INPUTFILLEDS);
 
-        // 2° filter the expenses and get his keys in localStorage for later update the atribute display 
+        // 2° Step: filter the expenses and get his keys in localStorage for later update the atribute display 
         const KEYS = [];
 
+        // Searching for an expense compatible with filter 
         for (let i = 0; i < localStorage.length; i++) {
 
             let key = localStorage.key(i);
@@ -55,46 +53,49 @@ export class Storage {
                 if (INPUTFILLEDS[j] === expense.cost)
                     filtered++;
             }
-            
+
             if (filtered === INPUTFILLEDS.length) {
-                console.log(key, expense)
+                KEYS.push(key);
             }
         }
 
+        return KEYS;
+    }
+
+    displayExpense(KEYS) {
+        // This method is intended to display filtered expenses without repeating the same expense.
+
+        console.log(this.expenses);
+        console.log(KEYS);
+
+        KEYS.forEach(key => {
+
+            // 1° Step: Display the filtered expenses in the table checking if it is already displayed
+            console.log(key);
+            
+            let expense = JSON.parse(localStorage.getItem(localStorage.key(key)));
+            
+            console.log(expense);
+
+            if(expense) {
+                if (expense.display === "inactive") {
+                    // Creating <tr>
+                    let row = this.expensesTable.insertRow();
+    
+                    // Creating <td>
+                    row.insertCell(0).innerHTML = `${expense.day}/${expense.month}/${expense.year}`;
+                    row.insertCell(1).innerHTML = `${expense.type}`;
+                    row.insertCell(2).innerHTML = `${expense.description}`;
+                    row.insertCell(3).innerHTML = `R$ ${expense.cost}`;
+                }
+            }
+
+            // 2° Step: Modify the display attribute so that 2 displays of an expense already on display do not occur
+            
+
+        });
 
 
-
-
-        // <tr>
-        //     <td id="table-date">12/03/2020</td>
-        //     <td id="table-type">Education</td>
-        //     <td id="table-description">Mensalidade Facu</td>
-        //     <td id="table-cost">1200</td>
-        //     <td id="td-closer">
-        //         <button id="tr-closer" class="btn closer">
-        //             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-        //                 <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-        //                 <path
-        //                     d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z" />
-        //             </svg>
-        //         </button>
-        //     </td>
-        // </tr>
-
-        // this.expenses.forEach((e) => {
-
-
-
-        //     // Creating <tr>
-        //     let row = this.listOfExpenses.insertRow();
-
-        //     // Creating <td>
-        //     row.insertCell(0).innerHTML = `${e.day}/${e.month}/${e.year}`;
-        //     row.insertCell(1).innerHTML = `${e.type}`;
-        //     row.insertCell(2).innerHTML = `${e.description}`;
-        //     row.insertCell(3).innerHTML = `R$ ${e.cost}`;
-
-        // })
     }
 
     getinputFilleds() {
