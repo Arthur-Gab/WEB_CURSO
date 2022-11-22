@@ -27,7 +27,6 @@ export class Storage {
 
             let key = localStorage.key(i);
             let expense = JSON.parse(localStorage.getItem(key));
-
             // this let is to define the expense has aproved on all filter that was 
             // if it's === INPUTFILLEDS.length is because it commend all the filters
             // for and exemple i'm filled year and month, so filtered = 2 means some expense has these two values
@@ -54,48 +53,48 @@ export class Storage {
                     filtered++;
             }
 
-            if (filtered === INPUTFILLEDS.length) {
+
+            if (filtered === INPUTFILLEDS.length && INPUTFILLEDS.length !== 0) {
                 KEYS.push(key);
             }
         }
+
+        KEYS.sort((a, b) => {
+            return a - b;
+        })
 
         return KEYS;
     }
 
     displayExpense(KEYS) {
+
         // This method is intended to display filtered expenses without repeating the same expense.
-
-        console.log(this.expenses);
-        console.log(KEYS);
-
         KEYS.forEach(key => {
 
-            // 1° Step: Display the filtered expenses in the table checking if it is already displayed
-            console.log(key);
-            
-            let expense = JSON.parse(localStorage.getItem(localStorage.key(key)));
-            
-            console.log(expense);
+            let expense = JSON.parse(localStorage.getItem(key));
 
-            if(expense) {
+            // 0° Step: Check if the expense exist, 'cause it's possible the user don't filled any filter value
+            if (expense) {
+
+                // 1° Step: Display the filtered expenses in the table checking if it is already displayed
                 if (expense.display === "inactive") {
                     // Creating <tr>
                     let row = this.expensesTable.insertRow();
-    
+
                     // Creating <td>
                     row.insertCell(0).innerHTML = `${expense.day}/${expense.month}/${expense.year}`;
                     row.insertCell(1).innerHTML = `${expense.type}`;
                     row.insertCell(2).innerHTML = `${expense.description}`;
                     row.insertCell(3).innerHTML = `R$ ${expense.cost}`;
                 }
+
+
+                // 2° Step: Modify the display attribute so that 2 displays of an expense already on display do not occur
+                expense.display = "active";
+                localStorage.setItem(key, JSON.stringify(expense));
             }
 
-            // 2° Step: Modify the display attribute so that 2 displays of an expense already on display do not occur
-            
-
         });
-
-
     }
 
     getinputFilleds() {
