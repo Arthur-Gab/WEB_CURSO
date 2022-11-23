@@ -144,10 +144,6 @@ li>a:hover {
         background-color: #fff;
     }
 
-    .mobile-menu {
-        display: block;
-    }
-
     .mobile-menu.active .line1 {
         transform: rotate(-45deg) translate(-8px, 8px);
     }
@@ -255,17 +251,11 @@ h2::selection {
     font-weight: 500;
 }
 
-.btn>svg {
+.btn> * {
     display: block;
     margin: auto;
     width: 24px;
     height: 24px;
-}
-
-@media (max-width: 767.98px) {
-    .closer {
-        width: 34px;
-    }
 }
 
 .btn:hover {
@@ -274,12 +264,27 @@ h2::selection {
     color: var(--bg-white);
 }
 
-@media(max-width: 400px) {
-    .closer {
-        display: none;
-    }
+.xmark {
+    height: 28px;
+    width: 48px;
+}
+
+.xmark:hover {
+    background-color: red;
 }
 
 #consult-expenses {
     padding-top: .25rem;
+}
+
+@media (max-width: 409.98px) {
+
+    .xmark {
+        width: 36px;
+    }
+
+    #list-expenses>tr>td:last-child {
+        padding: .5rem .5rem .5rem 0;
+    }
+
 }

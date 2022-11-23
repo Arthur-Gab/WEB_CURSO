@@ -86,15 +86,29 @@ export class Storage {
                     row.insertCell(1).innerHTML = `${expense.type}`;
                     row.insertCell(2).innerHTML = `${expense.description}`;
                     row.insertCell(3).innerHTML = `R$ ${expense.cost}`;
+
+                    // Creating closer table row
+                    let btn = document.createElement("button");
+                    btn.classList.add("btn");
+                    btn.classList.add("xmark");
+                    btn.setAttribute("id", "xmark-row-closer");
+
+                    let img = document.createElement("img");
+                    img.setAttribute("src", "./xmark-solid.svg")
+
+                    btn.appendChild(img);
+                    row.insertCell(4).appendChild(btn);
+
+                    // 2° Step: Modify the display attribute so that 2 displays of an expense already on display do not occur
+                    // expense.display = "active";
+                    // localStorage.setItem(key, JSON.stringify(expense));
                 }
-
-
-                // 2° Step: Modify the display attribute so that 2 displays of an expense already on display do not occur
-                expense.display = "active";
-                localStorage.setItem(key, JSON.stringify(expense));
             }
-
         });
+    }
+
+    closeExpenses() {
+
     }
 
     getinputFilleds() {
