@@ -9,7 +9,8 @@ export class Storage {
 
     recordExpense() {
         // Record Expenses in Local Storage as an Obj Literal;
-        localStorage.setItem(this.getIndex(), JSON.stringify(this.toObjLiteral(this.Expense)));
+        let index = this.getIndex();
+        localStorage.setItem(index, JSON.stringify(this.toObjLiteral(this.Expense, index)));
     }
 
     filterExpense() {
@@ -80,6 +81,7 @@ export class Storage {
                 if (expense.display === "inactive") {
                     // Creating <tr>
                     let row = this.expensesTable.insertRow();
+                    row.setAttribute("id", `${key}`);
 
                     // Creating <td>
                     row.insertCell(0).innerHTML = `${expense.day}/${expense.month}/${expense.year}`;
@@ -87,28 +89,12 @@ export class Storage {
                     row.insertCell(2).innerHTML = `${expense.description}`;
                     row.insertCell(3).innerHTML = `R$ ${expense.cost}`;
 
-                    // Creating closer table row
-                    let btn = document.createElement("button");
-                    btn.classList.add("btn");
-                    btn.classList.add("xmark");
-                    btn.setAttribute("id", "xmark-row-closer");
-
-                    let img = document.createElement("img");
-                    img.setAttribute("src", "./xmark-solid.svg")
-
-                    btn.appendChild(img);
-                    row.insertCell(4).appendChild(btn);
-
                     // 2° Step: Modify the display attribute so that 2 displays of an expense already on display do not occur
-                    // expense.display = "active";
-                    // localStorage.setItem(key, JSON.stringify(expense));
+                    expense.display = "active";
+                    localStorage.setItem(key, JSON.stringify(expense));
                 }
             }
         });
-    }
-
-    closeExpenses() {
-
     }
 
     getinputFilleds() {
@@ -137,13 +123,18 @@ export class Storage {
 
     loadExpenses() {
         // Run on load of the page Confer
-        // Creating an array of literal obj  filled with all expenses in localStorage compatible with
+        // Reseting the display atribute of the expenses in localStorage to inactive
         this.expenses = Array();
 
         for (let i = 0; i < localStorage.length; i++) {
 
             let expense = JSON.parse(localStorage.getItem(localStorage.key(i)));
-            this.expenses.push(expense);
+
+            expense.display = "inactive";
+
+            let pseudoExpense = JSON.stringify(expense);
+            
+            localStorage.setItem(expense.id, pseudoExpense);
 
         }
     }
@@ -188,7 +179,7 @@ export class Storage {
         }
     }
 
-    toObjLiteral(Expense) {
+    toObjLiteral(Expense, id) {
         // Return the values of the Expense for recording in the localStorage
         const day = Expense.day.value;
         const month = Expense.month.value;
@@ -205,7 +196,8 @@ export class Storage {
             type,
             description,
             cost,
-            display
+            display,
+            id
         }
 
         return pseudoExpense;

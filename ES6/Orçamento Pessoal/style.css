@@ -264,12 +264,12 @@ h2::selection {
     color: var(--bg-white);
 }
 
-.xmark {
+.xmark-row-closer {
     height: 28px;
     width: 48px;
 }
 
-.xmark:hover {
+.xmark-row-closer:hover {
     background-color: red;
 }
 
@@ -279,7 +279,7 @@ h2::selection {
 
 @media (max-width: 409.98px) {
 
-    .xmark {
+    .xmark-row-closer {
         width: 36px;
     }
 

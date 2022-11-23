@@ -17,8 +17,8 @@ class UserCreatOrFinderExpense {
         this.Storage = new Storage(this.Expense);
     }
 
-    addEventClickerIndex() {
-        // Put click events for Index.html here
+    addEventClickerRegisterExpense() {
+
         this.register.addEventListener("click",
             () => {
                 // Register Expenses on LocalStorage
@@ -29,7 +29,7 @@ class UserCreatOrFinderExpense {
                     this.Storage.recordExpense();
 
                     // Clear inputs for new insertions of values
-                    // this.Expense.clearInput();
+                    this.Expense.clearInput();
                 } else {
 
                     // Valores Invalidos - Aparece um Modal centralizado
@@ -45,27 +45,28 @@ class UserCreatOrFinderExpense {
             });
     }
 
-    addEventClickerConfer() {
-        // Put click events for Confer.html here
+    addEventClickerFIlterExpense() {
 
+        // Update the Expenses arrya in the Storage with the localStorage
+        this.Storage.loadExpenses();
+        
         // Filter Expenses on Local Storage and display that in the table body
         this.finder.addEventListener("click",
             () => {
-                // Update the Expenses arrya in the Storage with the localStorage
-                this.Storage.loadExpenses();
+
                 // Recuperar o valor dos inputs e retornar eles na table como uma despesa
                 this.Storage.displayExpense(this.Storage.filterExpense());
 
                 // Clear inputs for new insertions of values
-                // this.Expense.clearInput();
+                this.Expense.clearInput();
             });
     }
 
     init() {
         if (this.register)
-            this.addEventClickerIndex();
+            this.addEventClickerRegisterExpense();
         if (this.finder)
-            this.addEventClickerConfer();
+            this.addEventClickerFIlterExpense();
     }
 }
 
