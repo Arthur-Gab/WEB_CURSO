@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator 1 </title>
+</head>
+
+<body>
+
+    <h2>See the console</h2>
+
+    <script>
+
+        function* testeGenerator() {
+            yield "Teste 1";
+            yield "Teste 2";
+            yield "Teste 3";
+
+            return "Teste 4";
+        }
+
+        let meuGenerator = testeGenerator();
+
+        console.log(meuGenerator.next());
+        console.log("-------------");
+        console.log(meuGenerator.next());
+        console.log("-------------");
+        console.log(meuGenerator.next());
+        console.log("-------------");
+        console.log(meuGenerator.next());
+
+    </script>
+</body>
+
+</html>
