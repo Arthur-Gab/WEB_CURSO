@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chatGenerator 1</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generator 1 </title>
-</head>
-
-<body>
-
+  <body>
     <h2>See the console</h2>
 
+    <div>
+      <label for="response">Resposta: </label>
+      <input type="text" name="response" id="response" />
+      <button id="send">Enviar</button>
+    </div>
+
     <script>
+      function* chatGenerator() {
+        let option = yield "Bom dia, tudo bem?";
 
-        function* testeGenerator() {
-            yield "Teste 1";
-            yield "Teste 2";
-            yield "Teste 3";
+        if (option === "sim") {
+          option = yield "Gostaria de uma piada?";
 
-            return "Teste 4";
+          if (option === "sim") {
+            yield "Não sei piada"
+          }
+        } else {
+          yield "Espero que seu dia melhore!!! 😥";
         }
+      }
 
-        let meuGenerator = testeGenerator();
+      let chat = chatGenerator();
 
-        console.log(meuGenerator.next());
-        console.log("-------------");
-        console.log(meuGenerator.next());
-        console.log("-------------");
-        console.log(meuGenerator.next());
-        console.log("-------------");
-        console.log(meuGenerator.next());
+      function acao() {
+        let iteration = chat.next(document.querySelector("#response").value);
+        console.log(iteration);
+      }
 
+      document.querySelector("#send").addEventListener("click", acao);
     </script>
-</body>
-
+  </body>
 </html>
