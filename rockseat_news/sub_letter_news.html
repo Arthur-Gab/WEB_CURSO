@@ -101,7 +101,13 @@
     </main>
 
     <script>
-      document.querySelector("#send-email").addEventListener("submit", alert("Obrigado por se inscrever na RocketNews"));
+      if (document.querySelector("#email").value !== "")
+        document
+          .querySelector("#send-email")
+          .addEventListener(
+            "submit",
+            alert("Obrigado por se inscrever na RocketNews")
+          );
     </script>
   </body>
 </html>
