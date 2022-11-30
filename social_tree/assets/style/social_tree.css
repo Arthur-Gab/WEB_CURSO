@@ -112,6 +112,10 @@ li {
   width: 100%;
 }
 
+#custons-links li > a:hover {
+  box-shadow: 0 0 6px #8237ce;
+}
+
 #social-icons {
   display: flex;
   justify-content: center;
@@ -121,3 +125,17 @@ li {
 #social-icons li {
   margin: 0 12px;
 }
+
+#social-icons li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#social-icons li a img {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
