@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="RocketNews - Uma site de notícias" />
+    <meta name="author" content="Arthur Gabriel (layout by Rocketseat)" />
+    <title>Subscrib Letter News</title>
+    <link
+      rel="stylesheet"
+      href="/assets/stylesheets/subscrib_letter_news.css"
+    />
+  </head>
+  <body>
+    <!-- **Requisitos para o desafio:**
+
+    - Criar uma página que contenha um formulário para que o usuário possa inserir o e-mail.
+    - Ter um botão para o usuário clicar após inserir o e-mail.
+
+    ***Se desafie também:***
+
+    - *Criando uma função para o botão (ex. Exibir um alerta)*
+    - *Salvar os e-mails digitados em algum banco de dados* -->
+    <header>
+      <div class="container">
+        <nav>
+          <a
+            tabindex="-1"
+            href="sub_letter_news.html"
+            title="RocketNews - Uma site de notícias"
+          >
+            <img src="/assets/img/logo.svg" alt="Logo SVG" />
+          </a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section name="Texto descritivo do site">
+        <div class="container">
+          <h1 class="lc-title-h1">
+            atualize ideias e informações em 5 minutos.
+          </h1>
+          <h2 class="lc-title-h2">
+            tudo que você precisa saber para começar seu dia bem e informado
+          </h2>
+          <p class="paragraph-text">
+            noticias sobre o universo Rocketseat, e tudo o que precisa para
+            começar o dia melhor.
+            <br />
+            perfeito para se preparar para codar ☕
+          </p>
+        </div>
+      </section>
+      <section
+        name="Envio do email do usuário para inscrição na RocketNews ou redirecionamento para XXX.html"
+      >
+        <div class="container">
+          <form method="GET" action="sub_letter_news.html">
+            <fieldset name="Container para o formulário">
+              <label class="label-form" for="email"> Insire seu email: </label>
+              <div class="form-box">
+                <input
+                  tabindex="1"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="oi@rocketseat.com"
+                  title="Coloque o seu email aqui"
+                  autocomplete="email"
+                />
+                <button
+                  tabindex="2"
+                  type="submit"
+                  title="Envie seu email para receber as notícias"
+                  id="send-email"
+                >
+                  <img src="/assets/img/send.svg" alt="Send Email SVG" />
+                </button>
+              </div>
+            </fieldset>
+          </form>
+          <nav>
+            <a
+              href="#"
+              title="Verifique as noticias antes"
+              class="icon-link"
+              tabindex="3"
+            >
+              deixe-me ler primeiro
+              <span>
+                <img
+                  src="/assets/img/arrow-right.svg"
+                  alt="Seta pra direita SVG"
+                />
+              </span>
+            </a>
+          </nav>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      function alert() {
+        console.log("suces");
+        alert("Obrigado por se inscrever na RocketNews");
+      }
+
+      document.querySelector("#send-email").addEventListener("submit", alert);
+    </script>
+  </body>
+</html>
