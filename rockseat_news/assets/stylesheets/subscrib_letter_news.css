@@ -5,7 +5,8 @@
   --text-color: #e1e1e6;
   --title-color: #04d361;
   --form-color: #a8a8a8;
-  --bg-button-color: #8257e5;
+  /* --bg-button-color: #8257e5; */
+  --bg-button-color: #9d61f8;
 }
 
 *,
@@ -101,37 +102,52 @@ header {
   }
 }
 
-header nav {
+header nav ul {
   display: flex;
-  width: 100%;
+  width: max-content;
   justify-content: left;
 }
 
-header nav a {
+nav ul li {
+  list-style: none;
+  width: max-content;
+}
+
+/* Navegação para o main mais rápido para deficiente visual
+Melhorar a acessibilidade */
+header nav ul > li > a#deficiente-visual {
+  display: none;
+}
+
+header nav ul > li:nth-child(2) a {
   height: 150px;
   width: 336px;
+  display: block;
 }
 
 @media (min-width: 991.98px) {
-  header nav a {
+  header nav ul > li:nth-child(2) a {
     width: 400px;
   }
 }
 
-header nav a > img {
+header nav ul li a > figure > img#logo {
   width: 100%;
   height: 100%;
 }
 
-.lc-title-h1 {
-  font-size: 1.5rem;
+[class^="lc-title"] {
+  text-transform: lowercase;
   margin-bottom: 12px;
-  color: var(--title-color);
 }
 
 .lc-title-h2 {
-  font-size: 1rem;
-  margin-bottom: 12px;
+  font-size: 1.6rem;
+  color: var(--title-color);
+}
+
+.lc-title-h3 {
+  font-size: 1.1rem;
   color: var(--text-color);
 }
 
@@ -161,9 +177,12 @@ label.label-form {
   cursor: pointer;
 }
 
-div.form-box {
+div.form-flex-box {
   display: flex;
   width: max-content;
+}
+
+form#send-email-form div.form-flex-box {
   box-shadow: 6px 6px 8px var(--body-bg-color);
 }
 
@@ -176,7 +195,7 @@ button {
 }
 
 input:hover {
-  outline: 2px solid white; 
+  outline: 2px solid white;
   border: 2px solid blue;
   border-radius: 2px;
 }
@@ -195,7 +214,11 @@ button {
   background-color: var(--bg-button-color);
 }
 
-section nav a.icon-link {
+button > figure {
+  display: inherit;
+}
+
+section a.icon-link {
   display: flex;
   height: 24px;
   width: max-content;
@@ -206,7 +229,7 @@ section nav a.icon-link {
   position: relative;
 }
 
-section nav a.icon-link::before {
+section a.icon-link::before {
   content: "";
   position: absolute;
   left: 0;
@@ -217,10 +240,10 @@ section nav a.icon-link::before {
   transition: all 0.5s ease-out;
 }
 
-section nav a.icon-link:hover::before {
+section a.icon-link:hover::before {
   width: 100%;
 }
 
-a.icon-link span {
+a.icon-link figure {
   padding-left: 8px;
 }
