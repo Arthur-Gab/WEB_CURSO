@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+:root {
+  --body-bg: #eaeaea;
+  --receita-bg: #fff;
+  --text-primary-color: #1b1b1b;
+  --text-secondary-color: #8f8f8f;
+  --other-text-color: #39393a;
+  --title: 28px;
+  --sub-title: 20px;
+  --text: 16px;
+  --legend: 12px;
+  --box-border-radius: 10px;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--body-bg);
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  --bs-gutter-x: 3rem;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+article.revenue-layout {
+  background-color: var(--receita-bg);
+  border-radius: var(--box-border-radius);
+  margin-top: 32px;
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  max-width: 768px;
+}
+
+article.revenue-layout h1.title {
+  padding-top: 32px;
+}
+
+article.revenue-layout .title {
+  color: var(--text-primary-color);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: --var(--title);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+article.revenue-layout figure {
+  display: block;
+  margin: 0 auto;
+  text-align: right;
+}
+
+div.img-box {
+  height: 200px;
+  clip-path:  inset( 0 0 0 0 round 10px);
+}
+
+img.food-ilustration {
+  width: 100%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+article.revenue-layout figure figcaption {
+  margin-top: 8px;
+  color: var(--text-secondary-color);
+}
+
+ul,
+ol {
+  padding-left: 16px;
+  color: var(--other-text-color)
+}
+
+li {
+  margin-bottom: 24px;
+}
+
+footer {
+  padding: 24px 0 24px 0;
+  text-align: center;
+}
+
+a {
+  color: purple;
+}
